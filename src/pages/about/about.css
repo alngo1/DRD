@@ -1,0 +1,92 @@
+/* About us header */
+.header-padding{
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+/* Board Members Section */
+.board-members-section{
+    margin: 0;
+    background-color: rgba(2, 48, 62, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+    gap: 112px;
+}
+
+.board-members-section > h1{
+    color: rgba(133, 207, 221, 1);
+}
+
+.board-card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 65px;
+}
+
+.board-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    max-width: 360px;
+    max-height: 360px;
+    border-radius: 10px;
+}
+
+.board-name-text{
+    color: rgba(133, 207, 221, 1);
+}
+
+.board-role-text{
+    color: rgba(244, 249, 250, 1);
+}
+
+.join-board-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.board-interest-text{
+    color: rgba(133, 207, 221, 1);
+}
+
+.board-app-color{
+    background-color: rgba(241, 176, 32, 1);
+}
+
+/* FAQ section */
+.faq-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+
+.faq-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.faq-text-color{
+    color: rgba(0, 121, 146, 1);
+}
+
+.dropdown-container-container{
+    width: 100%;
+}
+
+.dropdown-container{
+    margin-right: 56px;
+    float: left;
+}
+
+.dropdown-container > div{
+    margin-bottom: 40px;
+}

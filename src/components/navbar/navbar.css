@@ -1,0 +1,22 @@
+nav {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    padding: 61px 70px;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6) 25%, rgba(52, 52, 52, 0.48) 71%, rgba(102, 102, 102, 0) 100%);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+div.logo-container {
+    padding-bottom: 61px;
+}
+
+img.logo {
+    width: 3.25rem;
+    height: 2.65rem;
+}

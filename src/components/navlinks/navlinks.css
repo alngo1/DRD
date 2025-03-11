@@ -1,0 +1,19 @@
+/* NAV LINKS COMPONENT */
+
+.nav-link-container {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  gap: 50px;
+  padding-bottom: 61px;
+}
+
+.nav-link-container>li>a {
+  text-decoration: none;
+  color: #F4F9FA;
+  font-size: 1.2rem;
+}
+
+.nav-link-container>li>a.join-button {
+  color: #02303E;
+}

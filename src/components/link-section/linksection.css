@@ -1,0 +1,33 @@
+/* Link Section */
+.link-section {
+    background-color: rgba(2, 48, 62, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+}
+
+.logo-and-join-container {
+    width: 400px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.link-section-text {
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.link-section-team-name {
+    color: rgba(244, 249, 250, 1);
+}
+
+.link-section-title {
+    color: rgba(133, 207, 221, 1);
+}

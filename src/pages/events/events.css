@@ -1,0 +1,88 @@
+.header-padding{
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+
+.event-button{
+    border: none;
+    background-color: rgba(241, 176, 32, 1);
+    margin-top: 40px;
+}
+
+/* practice section */
+.practice-section{
+    background-color: rgba(2, 48, 62, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 112px;
+    padding: 128px 120px 120px 120px;
+}
+
+.practice-section-text > p{
+    color: rgba(244, 249, 250, 1);
+}
+
+.card-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    gap: 48px;
+}
+
+.practice-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(11, 77, 91, 1);
+    border-radius: 10px;
+}
+
+.img-container{
+    /* border: 2px solid pink; */
+    width: 636px;
+    height: 400px;
+}
+
+.practice-card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* border-radius: 10px 0 0 10px; */
+}
+
+.text-button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 72px;
+}
+
+.practice-card-text{
+    color: rgba(244, 249, 250, 1);
+    width: 490px;
+}
+
+.text-button-container > button{
+    border: none;
+}
+
+.join-team-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.team-interest-text{
+    color: rgba(133, 207, 221, 1);
+}
+
+.join-button-color{
+    background-color: rgba(241, 176, 32, 1);
+}
+
+/* Races Section */
