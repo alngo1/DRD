@@ -87,6 +87,14 @@ export default function Events(){
                 <p className="body-text-one-font">We compete in both local and away races against teams from all over the world!</p>
                 <Carosel slides={slides}/>
             </section>
+            <section className="socials-section">
+                <h2 className="sub-heading-font">Socials</h2>
+                <p className="body-text-one-font">Join the team for fun bonding time off the water!</p>
+                <div className="join-team-container">
+                    <h2 className="body-text-one-font team-interest-text">See more on our Instagram!</h2>
+                    <Link className="secondary-button join-button-color">DRD Instagram</Link>
+                </div>
+            </section>
             <LinkSection/>
         </>
     )

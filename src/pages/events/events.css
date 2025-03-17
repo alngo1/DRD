@@ -86,3 +86,15 @@
 }
 
 /* Races Section */
+.races-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 112px;
+    padding: 100px;
+}
+
+/* Socials Section */
+.socials-section{
+    background-color: pink;
+}

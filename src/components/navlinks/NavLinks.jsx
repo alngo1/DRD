@@ -17,10 +17,10 @@ export default function NavLinks(props){
               <Link to="/" onClick={()=>{window.scrollTo(0,0)}}>Store</Link>
             </li>
             <li>
-              <Link to="/" onClick={()=>{window.scrollTo(0,0)}}>Contact</Link>
+              <Link to="/contacts" onClick={()=>{window.scrollTo(0,0)}}>Contact</Link>
             </li>
             {props.addJoin && <li>
-              <a className="secondary-button join-button" href="">Join</a>
+              <Link className="secondary-button join-button" to="/join" onClick={()=>{window.scrollTo(0,0)}}>Join</Link>
             </li>}
         </ul>
     )

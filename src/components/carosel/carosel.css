@@ -35,4 +35,5 @@
     border-radius: 10px;
     object-fit:contain;
     object-position: center;
+    display: block;
 }
