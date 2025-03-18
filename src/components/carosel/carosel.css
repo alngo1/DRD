@@ -6,23 +6,24 @@
 
 .slide-container{
     width: 100%;
-    height: 100%;
     display: flex;
-    /* flex-wrap:nowrap; */
+    align-items: center;
     overflow-x: scroll;
+    padding-bottom: 40px; /* pushes track from image slides*/
 }
 
 .slide-container::-webkit-scrollbar {
-    width: 20px;
+    height: 12px;
 }
 
 .slide-container::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
+    margin: 100px; /* shrinks track size*/
+    background-color: #D9E4E6;
     border-radius: 10px;
 }
 
 .slide-container::-webkit-scrollbar-thumb{
-    background: blue;
+    background: #AAB9BB;
     border-radius: 10px;
 }
 
@@ -30,9 +31,19 @@
     background-color: black;
     width: 100%;
     height: 100%;
-    display: block;
     border-radius: 10px;
-    object-fit:contain;
+    object-fit: contain;
     object-position: center;
-    display: block;
+}
+
+/* Buttons */
+.carosel-button{
+    border: none;
+    background: none;
+    padding-bottom: 40px; /* pushes track from image slides*/
+}
+
+.carosel-button > span{
+    color: #02303E;
+    font-size: 2rem;
 }

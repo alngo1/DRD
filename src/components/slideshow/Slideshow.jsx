@@ -45,21 +45,24 @@ export default function Slideshow(props){
     }
 
     if(slideContainer.current != null && slideRefs[0].current != null){
-        slideContainer.current.scroll({top: 0, left: activeIndex * slideRefs[0].current.clientWidth, behavior: "smooth"});
+        let slideWidth = slideRefs[0].current.clientWidth
+        let style = slideRefs[0].current.currentStyle || window.getComputedStyle(slideRefs[0].current);
+        let margin = parseInt(style.marginRight);
+        slideContainer.current.scroll({top: 0, left: activeIndex * (slideWidth + (margin * 2)), behavior: "smooth"});
     }
     console.log(activeIndex)
 
     return(
         <div className="slideshow">
-            <button onClick={slideLeft} className="button-left">
+            <button onClick={slideLeft} className="slideshow-button">
                 <span className="material-icons">
                     arrow_back_ios_new
                 </span>
             </button>
-            <div className="slide-container" ref={slideContainer}>
+            <div className="slideshow-slide-container" ref={slideContainer}>
                 {imageBlocks}
             </div>
-            <button onClick={slideRight} className="button-right">
+            <button onClick={slideRight} className="slideshow-button">
                 <span className="material-icons">
                     arrow_forward_ios
                 </span>
@@ -67,15 +70,3 @@ export default function Slideshow(props){
         </div>
     )
 }
-
-
-//how the three display works
-/* 
-one way: change html to hold three images at a time
-- change width and paddings of images
-    - css changed the behavior of the slideshow active index
-- must change active index functionality to fix
-    - one way is to have the active index start and end at spaces different than it is
-    - begin at index at 0 and when it gets to slides.length - 3
-
-*/

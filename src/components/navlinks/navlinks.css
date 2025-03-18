@@ -5,7 +5,6 @@
   flex-wrap: wrap;
   list-style-type: none;
   gap: 50px;
-  padding-bottom: 61px;
 }
 
 .nav-link-container>li>a {

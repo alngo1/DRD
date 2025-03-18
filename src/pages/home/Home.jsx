@@ -91,9 +91,6 @@ TODO: Create Contact Page
 - Create contact form
 - github pages won't allow for databases so must use external form api
   - mail chimp comes to mind
-TODO: Create Join Page
-TODO: Create Store Page
-- honestly can ignore might remove for now
-TODO: add discord and instagram links needs wifi
-TODO: Style Slideshows more
+TODO: Create Join Page 
+NODO: Create Store Page
 */

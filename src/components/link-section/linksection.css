@@ -4,9 +4,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding: 100px;
 }
 
+/* Left side logo and text */
 .logo-and-join-container {
     width: 400px;
     height: 330px;
@@ -30,4 +32,30 @@
 
 .link-section-title {
     color: rgba(133, 207, 221, 1);
+}
+
+
+/* Icon Links */
+.nav-and-socials-container{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;
+}
+
+.icon-link-container{
+    display: flex;
+    justify-content: end;
+    /* gap: 25px; */
+    width: 384px;
+}
+
+
+.icon-link{
+    display: flex;
+    justify-content: end;
+}
+
+.icon-link > img{
+    width: 75%;
 }

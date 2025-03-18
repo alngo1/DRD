@@ -13,9 +13,9 @@ export default function NavLinks(props){
             <li>
               <Link to="/events" onClick={()=>{window.scrollTo(0,0)}}>Events</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/" onClick={()=>{window.scrollTo(0,0)}}>Store</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/contacts" onClick={()=>{window.scrollTo(0,0)}}>Contact</Link>
             </li>

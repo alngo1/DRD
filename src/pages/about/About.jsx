@@ -40,13 +40,13 @@ export default function About(){
 
     const firstHalfDropdowns = faqs.map((obj, index) => {
         if(index % 2 == 0){
-            return obj
+            return {...obj, key:{index}}
         }
     })
 
     const secondHalfDropdowns = faqs.map((obj, index) => {
         if(index % 2 != 0){
-            return obj
+            return {...obj, key:{index}}
         }
     })
     
@@ -82,7 +82,6 @@ export default function About(){
                 </div>
             </section>
 
-            {/* this is the ugliest section I'm sorry */}
             <section className="faq-section">
                 <div className="faq-content">
                     <h1 className="sub-heading-font faq-text-color">Frequently Asked Questions</h1>
