@@ -2,7 +2,12 @@ import './events.css'
 import LinkSection from "../../components/link-section/LinkSection.jsx"
 import Navbar from "../../components/navbar/Navbar.jsx"
 import HeaderSection from "../../components/header-section/HeaderSection.jsx"
+//import carosel and slides
 import Carosel from '../../components/carosel/Carosel.jsx'
+import slides from "./eventSlides.js"
+//import slideshow and slides
+import Slideshow from "../../components/slideshow/Slideshow.jsx"
+import moreSlides from "./slideshowSlides.js"
 
 import eventImg from "../../assets/events/events.jpg"
 import img1 from "../../assets/events/practice1.jpg"
@@ -10,9 +15,6 @@ import img2 from "../../assets/events/practice2.jpg"
 import img3 from "../../assets/events/practice3.jpg"
 
 import { Link } from 'react-router'
-
-//carosel slides
-import slides from "./eventSlides.js"
 
 export default function Events(){
     return (
@@ -88,8 +90,11 @@ export default function Events(){
                 <Carosel slides={slides}/>
             </section>
             <section className="socials-section">
-                <h2 className="sub-heading-font">Socials</h2>
-                <p className="body-text-one-font">Join the team for fun bonding time off the water!</p>
+                <div className="social-section-text">
+                    <h2 className="sub-heading-font">Socials</h2>
+                    <p className="body-text-one-font">Join the team for fun bonding time off the water!</p>
+                    <Slideshow slides={moreSlides}/>
+                </div>
                 <div className="join-team-container">
                     <h2 className="body-text-one-font team-interest-text">See more on our Instagram!</h2>
                     <Link className="secondary-button join-button-color">DRD Instagram</Link>

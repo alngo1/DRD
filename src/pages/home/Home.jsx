@@ -72,3 +72,28 @@ export default function Home(){
     
   )
 }
+/*
+TODO: work on more responsive mobile design
+- Home page responsiveness
+  - make collapsable nav bar
+    - wait for nav icon
+  - wrap slide show/images and text
+  - shrink or wrap what we do section
+  - can leave links how it is honestly
+- About page responsiveness
+  - shrink image and make text readable
+  - wrap cards
+  - shrink faqs
+- Events page responsiveness
+  - shrink header image
+  - shrink practice cards
+TODO: Create Contact Page
+- Create contact form
+- github pages won't allow for databases so must use external form api
+  - mail chimp comes to mind
+TODO: Create Join Page
+TODO: Create Store Page
+- honestly can ignore might remove for now
+TODO: add discord and instagram links needs wifi
+TODO: Style Slideshows more
+*/

@@ -91,9 +91,10 @@ div.header-text-container {
 
 .our-story-section>img {
     max-width: 500px;
+    object-fit: contain;
+    object-position: center;
     border-radius: 10px;
 }
-
 
 .our-story-text {
     display: flex;
@@ -140,6 +141,8 @@ div.header-text-container {
 
 .card-container {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
