@@ -1,3 +1,4 @@
+import homeTeamPhoto from "../../assets/home/team.png"
 import ourStory from "../../assets/home/ourstory.jpg"
 import cards from "../../components/cards.js"
 // components
@@ -30,9 +31,8 @@ export default function Home(){
 
   return (
     <>
-      <div className="home-team-photo">
-      </div>
-      <main>
+      {/* <img src={homeTeamPhoto} className="home-team-photo"/> */}
+      <main className="home-team-photo">
         <Navbar/>
         <header>
           <div className="header-text-container">
@@ -91,6 +91,7 @@ TODO: Create Contact Page
 - Create contact form
 - github pages won't allow for databases so must use external form api
   - mail chimp comes to mind
+  - SMTP gmail API?
 TODO: Create Join Page 
 NODO: Create Store Page
 */

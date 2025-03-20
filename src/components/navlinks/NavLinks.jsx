@@ -1,26 +1,29 @@
 import './navlinks.css'
-import { Link } from 'react-router'
+import { NavLink } from 'react-router'
+import clsx from 'clsx'
 
 export default function NavLinks(props){
+    const navLinkClasses = clsx("nav-link-container", props.isNavbar && "links-in-navbar");
+
     return (
-        <ul className="nav-link-container">
+        <ul className={navLinkClasses}>
             <li>
-              <Link to="/" onClick={()=>{window.scrollTo(0,0)}}>Home</Link>
+              <NavLink to="/" onClick={()=>{window.scrollTo(0,0)}}>Home</NavLink>
             </li>
             <li>
-              <Link to="/about" onClick={()=>{window.scrollTo(0,0)}}>About</Link>
+              <NavLink to="/about" onClick={()=>{window.scrollTo(0,0)}}>About</NavLink>
             </li>
             <li>
-              <Link to="/events" onClick={()=>{window.scrollTo(0,0)}}>Events</Link>
+              <NavLink to="/events" onClick={()=>{window.scrollTo(0,0)}}>Events</NavLink>
             </li>
             {/* <li>
-              <Link to="/" onClick={()=>{window.scrollTo(0,0)}}>Store</Link>
+              <NavLink to="/" onClick={()=>{window.scrollTo(0,0)}}>Store</NavLink>
             </li> */}
             <li>
-              <Link to="/contacts" onClick={()=>{window.scrollTo(0,0)}}>Contact</Link>
+              <NavLink to="/contacts" onClick={()=>{window.scrollTo(0,0)}}>Contact</NavLink>
             </li>
             {props.addJoin && <li>
-              <Link className="secondary-button join-button" to="/join" onClick={()=>{window.scrollTo(0,0)}}>Join</Link>
+              <NavLink className="secondary-button join-button" to="/join" onClick={()=>{window.scrollTo(0,0)}}>Join</NavLink>
             </li>}
         </ul>
     )
