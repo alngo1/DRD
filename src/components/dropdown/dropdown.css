@@ -1,7 +1,12 @@
 .q-and-a-container{
     background-color: rgba(217, 228, 230, 1);
     border-radius: 10px;
-    width: 600px;
+    width: 100%;
+}
+
+.dropdown-number{
+    margin: 0;
+    color: #007992;
 }
 
 .question-container{

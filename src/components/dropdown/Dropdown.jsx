@@ -7,6 +7,7 @@ export default function Dropdown(props){
     return(
         <div className="q-and-a-container">
             <button onClick={props.onClick} className={questionClasses}>
+                {props.displayNumber && <h2 className="dropdown-number heading-font">{props.id}</h2>}
                 <p className="body-text-one-font question">{props.question}</p>
                 <span className={arrowClasses}>keyboard_arrow_down</span>
             </button>

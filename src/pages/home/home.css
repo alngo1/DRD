@@ -1,3 +1,9 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .home-team-photo {
     background-image: url("../../assets/home/team.png");
     height: 100%;
@@ -9,15 +15,6 @@
     background-color: rgba(2, 48, 62, 1);
     z-index: -1;
 }
-
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
 
 /* DRD Hero */
 header {

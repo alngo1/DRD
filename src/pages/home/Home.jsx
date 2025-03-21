@@ -92,6 +92,5 @@ TODO: Create Contact Page
 - github pages won't allow for databases so must use external form api
   - mail chimp comes to mind
   - SMTP gmail API?
-TODO: Create Join Page 
-NODO: Create Store Page
+TODO: style Join Page 
 */
