@@ -16,7 +16,7 @@ import { Link } from 'react-router'
 import slides from "./slides.js"
 
 export default function Home(){
-
+  
   const cardBlocks = cards.map((card, index) => {
     return (
       <div key={index} className="card">
@@ -28,10 +28,13 @@ export default function Home(){
 
     )
   })
-
+  
   return (
     <>
-      {/* <img src={homeTeamPhoto} className="home-team-photo"/> */}
+      {/* <video controls autoplay loop muted width="250px" height="250px" poster="../../assets/home/team.png">
+        <source src="../../assets/home/test.mp4" type="video/mp4" />
+        Your browser does not support the video/mp4 tag.
+      </video> */}
       <main className="home-team-photo">
         <Navbar/>
         <header>
@@ -39,7 +42,7 @@ export default function Home(){
             <h2 className="body-text-one-font">Est. 2004</h2>
             <h1 className="heading-font">Dragonboat at UC Davis</h1>
             <h2 className="body-text-one-font">Culture - Athleticism - Community</h2>
-            <a className="primary-button" href="">Join Now</a>
+            <a className="primary-button" href="">Join <span>Now</span></a>
           </div>
           <div className="arrow-container">
             <span className="material-icons arrow-down">keyboard_arrow_down</span>

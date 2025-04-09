@@ -25,24 +25,3 @@
 .nav-link-container>li>a.join-button:hover {
   color: #F4F9FA;
 }
-
-
-/* specifically for links in navbar */
-@media only screen and (max-width: 780px){
-  .links-in-navbar{
-    position: fixed;
-    left: 0;
-    top: 100px;
-    margin: 0; /*cause its h2s*/
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 1);
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-  }
-
-  .links-in-navbar>li>a.active{
-    color: blue;
-  }
-}

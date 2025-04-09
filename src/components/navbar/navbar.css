@@ -24,21 +24,19 @@ img.logo {
     display: none;
 }
 
-.navbar-menu-button > span{
-    font-size: 2rem;
-    transition: color 0.2s ease;
-    /* border: 2px solid pink; */
-    cursor: pointer;
-}
-
-.navbar-menu-button > span:hover{
-    color: white;
-}
-
 @media only screen and (max-width: 780px){
+    nav {
+        background: #D9D9D9;
+    }
+
     .navbar-menu-button{
         display: block;
         background: none;
         border: none;
+        cursor: pointer;
+    }
+
+    nav > .nav-link-container{
+        display: none;
     }
 }

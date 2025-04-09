@@ -1,7 +1,7 @@
 .q-and-a-container{
     background-color: rgba(217, 228, 230, 1);
     border-radius: 10px;
-    width: 100%;
+    max-width: 100%;
 }
 
 .dropdown-number{
@@ -14,13 +14,10 @@
     border-radius: 10px;
     border: none;
     width: 100%;
-    height: 150px;
+    min-height: 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    padding: 60px 40px;
-    text-align: left;
     cursor: pointer;
 }
 
@@ -44,7 +41,7 @@ span{
 
 .answer{
     /* display: none; */
-    width: 600px;
+    max-width: 600px;
     padding: 0 0 50px 50px;
     font-family: "Lexend", sans-serif;
     font-weight: 400;

@@ -80,11 +80,10 @@
 
 .dropdown-container-container{
     width: 100%;
-}
-
-.dropdown-container{
-    margin-right: 56px;
-    float: left;
+    display: flex;
+    justify-content: space-between;
+    gap: 56px;
+    flex-wrap: wrap;
 }
 
 .dropdown-container > div{

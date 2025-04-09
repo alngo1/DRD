@@ -1,12 +1,10 @@
 import './navlinks.css'
 import { NavLink } from 'react-router'
-import clsx from 'clsx'
 
 export default function NavLinks(props){
-    const navLinkClasses = clsx("nav-link-container", props.isNavbar && "links-in-navbar");
 
     return (
-        <ul className={navLinkClasses}>
+        <ul className="nav-link-container">
             <li>
               <NavLink to="/" onClick={()=>{window.scrollTo(0,0)}}>Home</NavLink>
             </li>

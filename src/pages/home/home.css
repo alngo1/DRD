@@ -16,9 +16,25 @@ main {
     z-index: -1;
 }
 
+@media only screen and (max-width: 780px){
+    .home-team-photo {
+        background: #D9D9D9;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .header-text-container > a > span{
+        display: none;
+    }
+}
+
 /* DRD Hero */
 header {
     color: #F4F9FA;
+    display: flex;
+    flex-direction: column;
+    gap: 30px
 }
 
 div.header-text-container {
@@ -26,18 +42,19 @@ div.header-text-container {
     flex-direction: column;
     align-items: flex-start;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
-.header-text-container>h1 {
-    font-size: 5rem;
+.header-text-container > a {
+    margin: 10px;
 }
 
-.header-text-container>h2 {
-    font-size: 1.5rem;
-}
-
-.header-text-container>a {
-    margin-top: 3rem;
+.header-text-container > a > span {
+    color: #02303E;
+    font-family: "Lexend", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin: 0;
 }
 
 .arrow-container {
@@ -69,17 +86,27 @@ div.header-text-container {
     }
 }
 
+@media only screen and (max-width: 780px){
+    div.header-text-container{
+        align-items: center;
+        text-align: center;
+        color: #02303E;
+    }
+}
 
 /* OUR STORY section */
 .our-story-section {
     background-color: rgba(2, 48, 62, 1);
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    gap: 2rem 0;
     padding: 100px;
 }
 
-.our-story-section>img {
-    max-width: 500px;
+.our-story-section > img {
+    width: 100%;
+    max-width: 500px; 
     object-fit: contain;
     object-position: center;
     border-radius: 10px;
@@ -143,8 +170,7 @@ div.header-text-container {
 }
 
 .what-we-do-image-container {
-    width: 400px;
-    height: 400px;
+    max-width: 400px;
 }
 
 .what-we-do-image {
@@ -153,6 +179,7 @@ div.header-text-container {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    aspect-ratio: 1/1;
 }
 
 .learn-more-colors {

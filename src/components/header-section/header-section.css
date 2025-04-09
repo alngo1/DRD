@@ -2,12 +2,13 @@
 .header-section {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
-    padding: 100px;
+    padding: 0 100px;
 }
 
 .header-section-text-container{
+    width: 100%;
     max-width: 500px;
     line-height: 1;
 }

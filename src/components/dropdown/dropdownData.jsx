@@ -134,7 +134,7 @@ export default [
             <p>Races are one of the <strong>best parts</strong> of dragonboat! They&#39;re exciting, fun, and you get to spend the entire day with the team showing off your hard work and winning medals! </p>
             <p>We usually participate in <strong>four</strong> races during the school year, and <strong>one</strong> in the summer. Races generally span between 1-2 days and will take the entire day.</p>
             <p><strong>Race fees</strong> are required for each race you attend (separate from team fees), and vary depending on the race.</p>
-            <button className="secondary-button">DRD Youtube</button>
+            <a target="_blank" href="https://www.youtube.com/channel/UCfdURDNouXbfKIrnfXnoQdg" className="secondary-button">DRD Youtube</a>
             <p>Check out our race videos and vlogs here!</p>
         </div>,
         expanded: false

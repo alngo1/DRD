@@ -16,7 +16,6 @@ body{
   font-weight: 400;
   font-size: 4.25rem;
   margin: 0;
-  line-height: 114.24px;
 }
 
 .sub-heading-font{
@@ -40,7 +39,6 @@ body{
   font-size: 1.2rem;
   margin: 0;
 }
-
 /* BUTTONS */
 .primary-button{
   background-color: #85CFDD;
@@ -71,7 +69,57 @@ body{
   margin: 0;
 }
 
+
 div#root{
   width: 100%;
   height: 100%;
+}
+
+@media only screen and (max-width: 480px){
+  .heading-font{
+    font-family: "Viga", sans-serif;
+    font-weight: 400;
+    font-size: 2.4rem;
+    margin: 0;
+  }
+
+  .sub-heading-font{
+    font-family: "Viga", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: rgba(133, 207, 221, 1);
+    margin: 0;
+  }
+
+  .body-text-one-font {
+    font-family: "Viga", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .body-text-two-font {
+    font-family: "Lexend", sans-serif;
+    font-weight: 400;
+    font-size: 0.7rem;
+    margin: 0;
+  }
+
+  .primary-button{
+  
+    /* media subheading */
+    font-family: "Lexend", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .secondary-button{
+  
+    /* media body text 2 */
+    font-family: "Lexend", sans-serif;
+    font-weight: 400;
+    font-size: 0.7rem;
+    margin: 0;
+  }
 }
