@@ -2,6 +2,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
 }
 
 .home-team-photo {
@@ -16,25 +17,12 @@ main {
     z-index: -1;
 }
 
-@media only screen and (max-width: 780px){
-    .home-team-photo {
-        background: #D9D9D9;
-        height: 100%;
-        width: 100%;
-        z-index: -1;
-    }
-
-    .header-text-container > a > span{
-        display: none;
-    }
-}
-
 /* DRD Hero */
 header {
     color: #F4F9FA;
     display: flex;
     flex-direction: column;
-    gap: 30px
+    gap: 30px;
 }
 
 div.header-text-container {
@@ -43,18 +31,15 @@ div.header-text-container {
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 0 50px;
 }
 
 .header-text-container > a {
     margin: 10px;
 }
 
-.header-text-container > a > span {
+.header-text-container > a > span{
     color: #02303E;
-    font-family: "Lexend", sans-serif;
-    font-weight: 500;
-    font-size: 1.2rem;
-    margin: 0;
 }
 
 .arrow-container {
@@ -86,7 +71,16 @@ div.header-text-container {
     }
 }
 
+
 @media only screen and (max-width: 780px){
+    .home-team-photo {
+        background: #D9D9D9;
+    }
+
+    .header-text-container > a > span{
+        display: none;
+    }
+
     div.header-text-container{
         align-items: center;
         text-align: center;
@@ -94,17 +88,86 @@ div.header-text-container {
     }
 }
 
+/* What is dragonboat */
+.what-is-db-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+
+.what-is-db-section > .header-section-text-container{
+    width: 100%;
+    max-width: 500px;
+}
+
+.what-is-db-section > h1 {
+    margin: 0;
+    color: rgba(0, 121, 146, 1);
+    padding-bottom: 20px;
+    text-shadow: -0.5px -0.5px 0 rgba(0, 121, 146, 1), 0.5px -0.5px 0 rgba(0, 121, 146, 1), -0.5px 0.5px 0 rgba(0, 121, 146, 1), 1px 1px 0 rgba(0, 121, 146, 1);
+    display: none;
+}
+
+
+.what-is-db-section > .header-content{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-section-text-container > h1 {
+    color: rgba(0, 121, 146, 1);
+    padding-bottom: 20px;
+    text-shadow: -0.5px -0.5px 0 rgba(0, 121, 146, 1), 0.5px -0.5px 0 rgba(0, 121, 146, 1), -0.5px 0.5px 0 rgba(0, 121, 146, 1), 1px 1px 0 rgba(0, 121, 146, 1);
+}
+
+.what-is-db-section > .header-content > img{
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+
+@media only screen and (max-width: 1200px){
+    .what-is-db-section > h1{
+        display: block;
+    }
+    
+    .header-section-text-container > h1{
+        display: none;
+    }
+}
+
 /* OUR STORY section */
 .our-story-section {
     background-color: rgba(2, 48, 62, 1);
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap-reverse;
-    gap: 2rem 0;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em 0;
     padding: 100px;
+    width: 100%;
 }
 
-.our-story-section > img {
+.our-story-section > h1 {
+    color: rgba(133, 207, 221, 1);
+    border-color: rgba(0, 121, 146, 1);
+    text-shadow: -0.5px -0.5px 0 rgba(0, 121, 146, 1), 0.5px -0.5px 0 rgba(0, 121, 146, 1), -0.5px 0.5px 0 rgba(0, 121, 146, 1), 1px 1px 0 rgba(0, 121, 146, 1);
+    display: none;
+}
+
+.our-story-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem 0;
+    width: 100%;
+}
+
+.our-story-content > img {
     width: 100%;
     max-width: 500px; 
     object-fit: contain;
@@ -121,7 +184,7 @@ div.header-text-container {
     width: 500px;
 }
 
-.our-story-text>h1 {
+.our-story-text > h1 {
     color: rgba(133, 207, 221, 1);
     border-color: rgba(0, 121, 146, 1);
     text-shadow: -0.5px -0.5px 0 rgba(0, 121, 146, 1), 0.5px -0.5px 0 rgba(0, 121, 146, 1), -0.5px 0.5px 0 rgba(0, 121, 146, 1), 1px 1px 0 rgba(0, 121, 146, 1);
@@ -139,6 +202,20 @@ div.header-text-container {
     background-color: rgba(241, 176, 32, 1);
     color: rgba(2, 48, 62, 1);
     padding: 10px 20px;
+}
+
+@media only screen and (max-width: 1200px){
+    .our-story-section > h1{
+        display: block;
+    }
+    
+    .our-story-content{
+        justify-content: center;
+    }
+
+    .our-story-text > h1{
+        display: none;
+    }
 }
 
 /* What We Do Section */
@@ -186,3 +263,12 @@ div.header-text-container {
     background-color: rgba(241, 176, 32, 1);
 }
 
+@media only screen and (max-width: 780px){
+    .what-is-db-section{
+        padding: 50px 20px;
+    }
+
+    .our-story-section{
+        padding: 50px 20px;
+    }
+}

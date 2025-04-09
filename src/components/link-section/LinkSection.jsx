@@ -24,7 +24,6 @@ export default function LinkSection() {
                     <p className="body-text-two-font link-section-team-name">Davis Racing Dragons</p>
                     <h1 className="body-text-one-font link-section-title">Dragonboat at UC Davis</h1>
                 </div>
-                
                 <a className="primary-button" href="">Join</a>                
             </div>
             <div className="nav-and-socials-container">

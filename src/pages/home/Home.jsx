@@ -5,7 +5,6 @@ import cards from "../../components/cards.js"
 import Carosel from "../../components/carosel/Carosel.jsx"
 import LinkSection from "../../components/link-section/LinkSection.jsx"
 import Navbar from "../../components/navbar/Navbar.jsx"
-import HeaderSection from "../../components/header-section/HeaderSection.jsx"
 // css
 import './home.css'
 // react router
@@ -42,25 +41,33 @@ export default function Home(){
             <h2 className="body-text-one-font">Est. 2004</h2>
             <h1 className="heading-font">Dragonboat at UC Davis</h1>
             <h2 className="body-text-one-font">Culture - Athleticism - Community</h2>
-            <a className="primary-button" href="">Join <span>Now</span></a>
+            <a className="primary-button" href="">Join <span className="body-text-one-font">Now</span></a>
           </div>
           <div className="arrow-container">
             <span className="material-icons arrow-down">keyboard_arrow_down</span>
           </div>
         </header>
       </main>
-      <HeaderSection
-        heading="What is dragonboat?"
-        headingStyle="sub-heading-font"
-        paragraph="Originating from China, this sport and festival has been a tradition for over 2,000 years. Today, dragon boat is enjoyed worldwide. A typical dragon boat crew consists of 20 people, in addition to a drummer and steersperson."
-        visual={<Carosel slides={slides}/>}
-      />
+
+      <section className="what-is-db-section">
+            <h1 className="sub-heading-font">What is dragonboat</h1>
+            <div className="header-content">
+                <div className="header-section-text-container">
+                  <h1 className="sub-heading-font">What is dragonboat</h1>
+                  <p className="body-text-two-font">Originating from China, this sport and festival has been a tradition for over 2,000 years. Today, dragon boat is enjoyed worldwide. A typical dragon boat crew consists of 20 people, in addition to a drummer and steersperson.</p>
+                </div>
+                <Carosel slides={slides}/>
+            </div>
+        </section>
       <section className="our-story-section">
-        <img src={ourStory} alt="" />
-        <div className="our-story-text">
-          <h1 className="sub-heading-font">Our Story</h1>
-          <p className="body-text-two-font">Davis Racing Dragons was established in 2004 by students who wanted to bring collegiate-level dragonboat to UC Davis. Since then, we have always strived to create a fun, welcoming community built on teamwork and competitive excellence. </p>
-          <Link className="secondary-button" to="/about" onClick={() => {window.scrollTo(0, 0)}}>About Page</Link>
+        <h1 className="sub-heading-font">Our Story</h1>
+        <div className="our-story-content">
+          <img src={ourStory} alt="" />
+          <div className="our-story-text">
+            <h1 className="sub-heading-font">Our Story</h1>
+            <p className="body-text-two-font">Davis Racing Dragons was established in 2004 by students who wanted to bring collegiate-level dragonboat to UC Davis. Since then, we have always strived to create a fun, welcoming community built on teamwork and competitive excellence. </p>
+            <Link className="secondary-button" to="/about" onClick={() => {window.scrollTo(0, 0)}}>About Page</Link>
+          </div>
         </div>
       </section>
       <section className="what-we-do-section">
@@ -78,11 +85,7 @@ export default function Home(){
 /*
 TODO: work on more responsive mobile design
 - Home page responsiveness
-  - make collapsable nav bar
-    - wait for nav icon
-  - wrap slide show/images and text
-  - shrink or wrap what we do section
-  - can leave links how it is honestly
+  - don't forget to uncomment carosel
 - About page responsiveness
   - shrink image and make text readable
   - wrap cards

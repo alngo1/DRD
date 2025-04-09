@@ -5,18 +5,17 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    width: 100%;
     padding: 100px;
 }
 
 /* Left side logo and text */
 .logo-and-join-container {
-    width: 400px;
-    height: 330px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
+    gap: 2em 0;
 }
 
 .link-section-text {
@@ -41,7 +40,6 @@
     flex-direction: column;
     align-items: end;
     gap: 20px;
-    width: 100%;
 }
 
 .icon-link-container{
@@ -68,7 +66,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: 0;
+        padding: 25px 0;
     }
 
     .link-section > .nav-link-container{

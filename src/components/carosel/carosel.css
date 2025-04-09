@@ -1,7 +1,8 @@
 .carosel {
-    width: 500px;
+    max-width: 500px;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .slide-container{
@@ -9,7 +10,8 @@
     display: flex;
     align-items: center;
     overflow-x: scroll;
-    padding-bottom: 40px; /* pushes track from image slides*/
+    /* this padding pushes track from image slides*/
+    padding-bottom: 40px;
 }
 
 .slide-container::-webkit-scrollbar {
@@ -46,4 +48,21 @@
 .carosel-button > span{
     color: #02303E;
     font-size: 2rem;
+}
+
+
+@media only screen and (max-width: 780px){
+
+    .slide-container{
+        padding: 0;
+    }
+    
+    .slide-container::-webkit-scrollbar-track {
+        margin: 50px;
+        width: 500px;
+    }
+
+    .carosel-button{
+        display: none;
+    }
 }
