@@ -12,6 +12,7 @@ export default function HeaderSection(props) {
             <h1 className={classes}>{props.heading}</h1>
             <div className="header-content">
                 <div className="header-section-text-container">
+                    <h1 className={classes}>{props.heading}</h1>
                     <p className="body-text-two-font">{props.paragraph}</p>
                     {props.buttons}
                 </div>

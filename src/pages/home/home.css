@@ -95,12 +95,6 @@ div.header-text-container {
     align-items: center;
     padding: 100px;
 }
-
-.what-is-db-section > .header-section-text-container{
-    width: 100%;
-    max-width: 500px;
-}
-
 .what-is-db-section > h1 {
     margin: 0;
     color: rgba(0, 121, 146, 1);
@@ -109,7 +103,6 @@ div.header-text-container {
     display: none;
 }
 
-
 .what-is-db-section > .header-content{
     display: flex;
     flex-wrap: wrap-reverse;
@@ -117,7 +110,12 @@ div.header-text-container {
     justify-content: center;
 }
 
-.header-section-text-container > h1 {
+.what-is-db-section-text-container{
+    width: 100%;
+    max-width: 500px;
+}
+
+.what-is-db-section-text-container > h1 {
     color: rgba(0, 121, 146, 1);
     padding-bottom: 20px;
     text-shadow: -0.5px -0.5px 0 rgba(0, 121, 146, 1), 0.5px -0.5px 0 rgba(0, 121, 146, 1), -0.5px 0.5px 0 rgba(0, 121, 146, 1), 1px 1px 0 rgba(0, 121, 146, 1);
@@ -135,7 +133,7 @@ div.header-text-container {
         display: block;
     }
     
-    .header-section-text-container > h1{
+    .what-is-db-section-text-container > h1{
         display: none;
     }
 }

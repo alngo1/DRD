@@ -1,18 +1,13 @@
-/* About us header */
-.header-padding{
-    padding-top: 150px;
-    padding-bottom: 50px;
-}
-
 /* Board Members Section */
 .board-members-section{
-    margin: 0;
     background-color: rgba(2, 48, 62, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 100px;
     gap: 112px;
+    width: 100%;
+    min-height: 100%;
 }
 
 .board-members-section > h1{
@@ -20,27 +15,30 @@
 }
 
 .board-card-container{
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 65px;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
 .board-img{
     width: 100%;
-    height: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
     object-fit: cover;
     object-position: top;
-    max-width: 360px;
-    max-height: 360px;
-    border-radius: 10px;
 }
 
 .board-name-text{
+    width: 100%;
     color: rgba(133, 207, 221, 1);
 }
 
 .board-role-text{
+    width: 100%;
+    max-width: 300px;
     color: rgba(244, 249, 250, 1);
 }
 
@@ -59,6 +57,23 @@
     background-color: rgba(241, 176, 32, 1);
 }
 
+@media only screen and (max-width: 780px){
+    .board-members-section{
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .board-card-container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .board-card-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 /* FAQ section */
 .faq-section{
     display: flex;
@@ -70,8 +85,7 @@
 .faq-content{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 80px;
+    /* gap: 80px; */
 }
 
 .faq-text-color{
@@ -82,10 +96,26 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 56px;
     flex-wrap: wrap;
+}
+
+.dropdown-container{
+    width: 50%;
+    padding-top: 56px;
+    padding-right: 20px;
 }
 
 .dropdown-container > div{
     margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 780px){
+    .dropdown-container-container{
+        padding: 56px 0 0 0;
+    }
+
+    .dropdown-container{
+        width: 100%;
+        padding: 0;
+    }
 }

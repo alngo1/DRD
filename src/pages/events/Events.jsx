@@ -20,15 +20,13 @@ export default function Events(){
     return (
         <>
             <Navbar/>
-            <div className="header-padding">
-                <HeaderSection
-                    heading="Events"
-                    headingStyle="heading-font"
-                    paragraph="Davis Racing Dragons holds and participates in a variety of events throughout the year! These include our weekly practices, team socials, and dragonboat races."
-                    visual={<img src={eventImg} className="" alt="" />}
-                    buttons={<button className="secondary-button event-button">View Full Calendar</button>}
-                />
-            </div>
+            <HeaderSection
+                heading="Events"
+                headingStyle="heading-font"
+                paragraph="Davis Racing Dragons holds and participates in a variety of events throughout the year! These include our weekly practices, team socials, and dragonboat races."
+                visual={<img src={eventImg} className="" alt="" />}
+                // buttons={<button className="secondary-button event-button">View Full Calendar</button>}
+            />
             <section className="practice-section">
                 <div className="practice-section-text">
                     <h2 className="sub-heading-font">Practices</h2>
@@ -36,9 +34,7 @@ export default function Events(){
                 </div>
                 <div className="card-section">
                     <div className="practice-card">
-                        <div className="img-container">
-                            <img src={img1} className="practice-card-img" alt="" />
-                        </div>
+                        <img src={img1} className="practice-card-img" alt="" />
                         <div className="text-button-container">
                             <div className="practice-card-text">
                                 <h2 className="sub-heading-font">When</h2>
@@ -51,9 +47,7 @@ export default function Events(){
                         </div>
                     </div>
                     <div className="practice-card">
-                        <div className="img-container">
-                            <img src={img2} className="practice-card-img" alt="" />
-                        </div>
+                        <img src={img2} className="practice-card-img" alt="" />
                         <div className="text-button-container">
                             <div className="practice-card-text">
                                 <h2 className="sub-heading-font">Where</h2>
@@ -66,9 +60,7 @@ export default function Events(){
                         </div>
                     </div>
                     <div className="practice-card">
-                        <div className="img-container">
-                            <img src={img3} className="practice-card-img" alt="" />
-                        </div>
+                        <img src={img3} className="practice-card-img" alt="" />
                         <div className="text-button-container">
                             <div className="practice-card-text">
                                 <h2 className="sub-heading-font">How</h2>
@@ -97,7 +89,7 @@ export default function Events(){
                 </div>
                 <div className="join-team-container">
                     <h2 className="body-text-one-font team-interest-text">See more on our Instagram!</h2>
-                    <Link className="secondary-button join-button-color">DRD Instagram</Link>
+                    <a target="_blank" href="https://www.instagram.com/davis.racing.dragons/" className="secondary-button join-button-color">DRD Instagram</a>
                 </div>
             </section>
             <LinkSection/>

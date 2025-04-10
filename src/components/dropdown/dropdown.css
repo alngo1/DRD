@@ -1,7 +1,7 @@
 .q-and-a-container{
     background-color: rgba(217, 228, 230, 1);
     border-radius: 10px;
-    max-width: 100%;
+    width: 100%;
 }
 
 .dropdown-number{
@@ -27,6 +27,7 @@
 
 .question{
     color: rgba(2, 48, 62, 1);
+    padding: 20px;
 }
 
 .question-container:hover{
@@ -47,7 +48,9 @@ span{
     font-weight: 400;
     font-size: 1.2rem;
     margin: 0;
+    border: 2px solid pink
 }
+
 .answer > p{
     max-width: 400px;
 }
@@ -63,7 +66,20 @@ span{
     transition: all 0.5s ease;
 }
 
-/* TODO
-Style the answers
+@media only screen and (max-width: 1200px){
+    .answer{
+        padding: 50px;
+    }
+}
 
-*/
+@media only screen and (max-width: 780px){
+    .question-container{
+        min-height: 100px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .question-container{
+        min-height: 50px;
+    }
+}

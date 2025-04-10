@@ -52,7 +52,7 @@ export default function Home(){
       <section className="what-is-db-section">
             <h1 className="sub-heading-font">What is dragonboat</h1>
             <div className="header-content">
-                <div className="header-section-text-container">
+                <div className="what-is-db-section-text-container">
                   <h1 className="sub-heading-font">What is dragonboat</h1>
                   <p className="body-text-two-font">Originating from China, this sport and festival has been a tradition for over 2,000 years. Today, dragon boat is enjoyed worldwide. A typical dragon boat crew consists of 20 people, in addition to a drummer and steersperson.</p>
                 </div>
@@ -83,20 +83,12 @@ export default function Home(){
   )
 }
 /*
-TODO: work on more responsive mobile design
-- Home page responsiveness
-  - don't forget to uncomment carosel
-- About page responsiveness
-  - shrink image and make text readable
-  - wrap cards
-  - shrink faqs
-- Events page responsiveness
-  - shrink header image
-  - shrink practice cards
 TODO: Create Contact Page
 - Create contact form
 - github pages won't allow for databases so must use external form api
   - mail chimp comes to mind
   - SMTP gmail API?
-TODO: style Join Page 
+TODO: style Join Page
+
+EXTRA: shrink words in dropdown, Races Section, Slideshow component CSS, Store page
 */

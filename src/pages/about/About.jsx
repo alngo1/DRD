@@ -63,14 +63,12 @@ export default function About(){
     return (
         <>
             <Navbar/>
-            <div className="header-padding">
-                <HeaderSection
-                    heading="About Us"
-                    headingStyle="heading-font"
-                    paragraph="Established in 2004, Davis Racing Dragons is a student-run collegiate-level dragonboat team. We strive to create a fun, welcoming, and tight-knit community for people of all experience levels. One of our main priorities is to offer our members an environment where they can grow as both an individual and within the team."
-                    visual={<img src={aboutUsImage} className="about-us-img" alt="" />}
-                />
-            </div>
+            <HeaderSection
+                heading="About Us"
+                headingStyle="heading-font"
+                paragraph="Established in 2004, Davis Racing Dragons is a student-run collegiate-level dragonboat team. We strive to create a fun, welcoming, and tight-knit community for people of all experience levels. One of our main priorities is to offer our members an environment where they can grow as both an individual and within the team."
+                visual={<img src={aboutUsImage} className="about-us-img" alt="" />}
+            />
             <section className="board-members-section">
                 <h1 className="sub-heading-font">Board Members 2024-2025</h1>
                 <div className="board-card-container">
