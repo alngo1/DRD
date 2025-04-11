@@ -19,10 +19,8 @@
 .menu-links > li > a{
     text-decoration: none;
     color: #02303E;
-    transition: color 0.2s ease;
     display: block;
-    text-align: center;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .menu-links > li > a:hover {

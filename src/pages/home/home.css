@@ -103,11 +103,12 @@ div.header-text-container {
     display: none;
 }
 
-.what-is-db-section > .header-content{
+.what-is-db-content{
     display: flex;
     flex-wrap: wrap-reverse;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .what-is-db-section-text-container{
@@ -121,7 +122,7 @@ div.header-text-container {
     text-shadow: -0.5px -0.5px 0 rgba(0, 121, 146, 1), 0.5px -0.5px 0 rgba(0, 121, 146, 1), -0.5px 0.5px 0 rgba(0, 121, 146, 1), 1px 1px 0 rgba(0, 121, 146, 1);
 }
 
-.what-is-db-section > .header-content > img{
+.what-is-db-content > img{
     width: 100%;
     max-width: 600px;
     border-radius: 10px;
@@ -159,7 +160,7 @@ div.header-text-container {
 
 .our-story-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 2rem 0;
     width: 100%;

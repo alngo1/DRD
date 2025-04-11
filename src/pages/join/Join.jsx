@@ -1,7 +1,6 @@
 import './join.css'
 import LinkSection from "../../components/link-section/LinkSection.jsx"
 import Navbar from "../../components/navbar/Navbar.jsx"
-import HeaderSection from "../../components/header-section/HeaderSection.jsx"
 import Dropdown from "../../components/dropdown/Dropdown.jsx"
 
 import { useState } from 'react'
@@ -40,14 +39,13 @@ export default function Join(){
     return (
         <>
             <Navbar/>
-            <HeaderSection
-                heading="Join"
-                headingStyle="heading-font"
-                paragraph="Learn more about how to join Davis Racing Dragons!"
-            />
-            <div className="join-faqs-container">
-                {faqs}
-            </div>
+            <section className="join-section">
+                <h1 className="heading-font">Join</h1>
+                <p className="body-text-two-font">Learn more about how to join Davis Racing Dragons!</p>
+                <div className="join-faqs-container">
+                    {faqs}
+                </div>
+            </section>
             <LinkSection/>
         </>
     )

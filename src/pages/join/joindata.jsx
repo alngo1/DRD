@@ -34,9 +34,9 @@ export default [
                     <div className="answer">
                         <ul>
                             <li className="body-text-two-font">what is CDBA</li>
-                            <li>follow this document to sign up</li>
-                            <li>if you are already signed up under another team, message ---</li>
-                            <li>CDBA link</li>
+                            <li className="body-text-two-font">follow this document to sign up</li>
+                            <li className="body-text-two-font">if you are already signed up under another team, message ---</li>
+                            <li className="body-text-two-font">CDBA link</li>
                         </ul>
                     </div>
                 ),

@@ -48,8 +48,13 @@
 .carosel-button > span{
     color: #02303E;
     font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.1s ease;
 }
 
+.carosel-button > span:hover{
+    color: rgba(133, 207, 221, 1);
+}
 
 @media only screen and (max-width: 780px){
 

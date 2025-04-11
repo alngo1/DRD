@@ -51,7 +51,7 @@ export default function Home(){
 
       <section className="what-is-db-section">
             <h1 className="sub-heading-font">What is dragonboat</h1>
-            <div className="header-content">
+            <div className="what-is-db-content">
                 <div className="what-is-db-section-text-container">
                   <h1 className="sub-heading-font">What is dragonboat</h1>
                   <p className="body-text-two-font">Originating from China, this sport and festival has been a tradition for over 2,000 years. Today, dragon boat is enjoyed worldwide. A typical dragon boat crew consists of 20 people, in addition to a drummer and steersperson.</p>
@@ -88,7 +88,7 @@ TODO: Create Contact Page
 - github pages won't allow for databases so must use external form api
   - mail chimp comes to mind
   - SMTP gmail API?
-TODO: style Join Page
+TODO: style dropdown answer text
 
-EXTRA: shrink words in dropdown, Races Section, Slideshow component CSS, Store page
+EXTRA: Races Section, Slideshow component CSS, Store page
 */

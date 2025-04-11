@@ -7,6 +7,13 @@
 .dropdown-number{
     margin: 0;
     color: #007992;
+    padding: 0 30px;
+    width: 100px;
+}
+
+.number-question-container{
+    display: flex;
+    align-items: center;
 }
 
 .question-container{
@@ -27,7 +34,8 @@
 
 .question{
     color: rgba(2, 48, 62, 1);
-    padding: 20px;
+    padding: 0 20px;
+    text-align: start;
 }
 
 .question-container:hover{
@@ -48,7 +56,6 @@ span{
     font-weight: 400;
     font-size: 1.2rem;
     margin: 0;
-    border: 2px solid pink
 }
 
 .answer > p{
@@ -59,6 +66,7 @@ span{
     font-size: 3rem;
     color: rgba(2, 48, 62, 1);
     transition: all 0.2s ease;
+    padding: 0 30px;
 }
 
 .expand{
@@ -81,5 +89,20 @@ span{
 @media only screen and (max-width: 480px){
     .question-container{
         min-height: 50px;
+    }
+
+    .question{
+        font-family: "Viga", sans-serif;
+        font-weight: 400;
+        font-size: 0.7rem;
+    }
+
+    .dropdown-number{
+        padding: 0;
+        width: auto;
+    }
+
+    .dropdown-arrow{
+        padding: 0;
     }
 }
