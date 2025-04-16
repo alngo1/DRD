@@ -83,11 +83,8 @@ export default function Home(){
   )
 }
 /*
-TODO: Create Contact Page
-- Create contact form
-- github pages won't allow for databases so must use external form api
-  - mail chimp comes to mind
-  - SMTP gmail API?
+TODO: Style Contact Page
+  - connect to nodejs and firebase
 TODO: style dropdown answer text
 
 EXTRA: Races Section, Slideshow component CSS, Store page

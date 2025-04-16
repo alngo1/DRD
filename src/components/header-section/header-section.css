@@ -13,7 +13,7 @@
 .header-content{
     display: flex;
     flex-wrap: wrap-reverse;
-    align-items: center;
+    align-items: start;
     justify-content: space-around;
     gap: 2em 0;
     width: 100%;
