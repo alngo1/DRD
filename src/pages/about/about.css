@@ -18,8 +18,10 @@
     width: 100%;
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+
+    padding: 0 100px;
 }
 
 .board-img{
@@ -57,23 +59,55 @@
     background-color: rgba(241, 176, 32, 1);
 }
 
-@media only screen and (max-width: 780px){
-    .board-members-section{
-        padding: 20px;
-        gap: 20px;
+@media only screen and (max-width: 850px){
+    .board-dropdown-section > .q-and-a-container{
+        background-color: #02303E;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .board-dropdown-section .question-container{
+        background-color: #02303E;
+        padding: 60px 25px;
+    }
+    .board-dropdown-section .question{
+        max-width: 201px;
+        color: #85CFDD;
+        /* overrides default body-text-one */
+        font-family: Viga;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .board-dropdown-section .dropdown-arrow{
+        color: #F4F9FA;
     }
 
     .board-card-container{
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        padding: 0 40px 40px 40px;
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+
+    .board-img{
+        border-radius: 5px;
+    }
+    .board-name-text{
+        font-family: "Viga", sans-serif;
+        font-weight: 400;
+        font-size: 28px;
+        margin: 0;
+    }
+
+    .board-role-text{
+        font-family: "Lexend", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        margin: 0;
     }
 }
 
-@media only screen and (max-width: 480px){
-    .board-card-container{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 /* FAQ section */
 .faq-section{
     display: flex;
@@ -85,7 +119,7 @@
 .faq-content{
     display: flex;
     flex-direction: column;
-    /* gap: 80px; */
+    align-items: center;
 }
 
 .faq-text-color{
@@ -105,17 +139,51 @@
     padding-right: 20px;
 }
 
-.dropdown-container > div{
+.dropdown-container > .q-and-a-container{
     margin-bottom: 40px;
 }
 
+.dropdown-container > .q-and-a-container > .question-container{
+    height: 64px;
+}
+
+@media only screen and (max-width: 900px){
+    .dropdown-container > .q-and-a-container > .question-container > .question{
+        font-family: "Lexend", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .dropdown-container > .q-and-a-container > .answer > p , li{
+        font-family: "Lexend", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
 @media only screen and (max-width: 780px){
+    .faq-section{
+        padding: 60px 25px;
+    }
+
+    .faq-content{
+        align-items: start;
+    }
+
     .dropdown-container-container{
-        padding: 56px 0 0 0;
+        padding-top: 40px;
     }
 
     .dropdown-container{
         width: 100%;
         padding: 0;
+    }
+
+    
+
+    .answer > button{
+        font-size: 0.7rem;
     }
 }

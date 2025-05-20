@@ -2,10 +2,26 @@
   box-sizing: border-box;
 }
 
+html, body{
+  height: 100vh;
+  /* 
+    100dvh is the solution to IOS address bar hiding a portion of the site, this
+    changes height on mobile to adjust for the bar
+
+  */
+  height: 100svh;
+}
+
+@media only screen and (max-height: 500px){
+  html, body{
+    height: 100vh;
+    height: 100dvh;
+  }
+}
+
 body{
   font-family: "Lexend", sans-serif;
   margin: 0;
-  height: 100vh;
   /* light grey background */
   background-color: rgba(244, 249, 250, 1); 
 }
@@ -75,33 +91,32 @@ div#root{
   height: 100%;
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 950px){
   .heading-font{
     font-family: "Viga", sans-serif;
     font-weight: 400;
-    font-size: 2.4rem;
+    font-size: 48px;
     margin: 0;
   }
 
   .sub-heading-font{
     font-family: "Viga", sans-serif;
     font-weight: 400;
-    font-size: 1.4rem;
-    color: rgba(133, 207, 221, 1);
+    font-size: 28px;
     margin: 0;
   }
 
   .body-text-one-font {
-    font-family: "Viga", sans-serif;
+    font-family: "Lexend", sans-serif;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 18px;
     margin: 0;
   }
 
   .body-text-two-font {
     font-family: "Lexend", sans-serif;
     font-weight: 400;
-    font-size: 0.7rem;
+    font-size: 14px;
     margin: 0;
   }
 
@@ -114,12 +129,13 @@ div#root{
     margin: 0;
   }
   
+  /* currently tertiary button styles */
   .secondary-button{
   
     /* media body text 2 */
     font-family: "Lexend", sans-serif;
-    font-weight: 400;
-    font-size: 0.7rem;
+    font-weight: 500;
+    font-size: 18px;
     margin: 0;
   }
 }

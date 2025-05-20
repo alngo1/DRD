@@ -1,5 +1,5 @@
 .join-section{
-    padding: 0 100px;
+    padding: 0 100px 100px 100px;
 }
 
 .join-faqs-container{
@@ -24,9 +24,27 @@
     gap: 48px;
 }
 
+.join-final-questions{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.join-final-questions > .final-buttons{
+    display: flex;
+    gap: 36px;
+}
+
+.final-buttons > a{
+    border: none;
+    background-color: #F1B020;
+    color: #02303E;
+}
+
 @media only screen and (max-width: 780px){
     .join-section{
-        background: #D9D9D9;
         padding: 20px;
     }
 

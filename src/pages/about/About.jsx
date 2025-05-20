@@ -1,6 +1,6 @@
 import aboutUsImage from "../../assets/about/aboutus.jpg"
-import boardData from "../../components/boardData.js"
-import dropdownData from "../../components/dropdown/dropdownData.jsx"
+import boardData from "./boardData.js"
+import dropdownData from "./faqData.jsx"
 // Components
 import LinkSection from "../../components/link-section/LinkSection.jsx"
 import Navbar from "../../components/navbar/Navbar.jsx"
@@ -11,10 +11,20 @@ import './about.css'
 // router
 import { Link } from "react-router"
 // state
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
-export default function About(){
+import img0 from "../../assets/about/board_photos/default.png"
+
+
+export default function About(props){
+    const [boardMemberDropdown, setBoardMemberDropdown] = useState(false);
     const[dropdowns, setDropdowns] = useState(dropdownData);
+
+    // function for board card dropdown
+    // and faq section dropdown respectively
+    function handleBoardDropdown(){
+        setBoardMemberDropdown(prev => !prev);
+    }
 
     function handleDropdownClick(id){
         setDropdowns(prevDropdowns => {
@@ -24,6 +34,8 @@ export default function About(){
           })
     }
 
+    // creating list of dropdowns
+    // then seperating into two distinct dropdown sections
     let faqs = dropdowns.map(obj => {
         const questionTextList = obj.question.map((text, index) => index == obj.spanIndex ? <span key={index}>{obj.question[obj.spanIndex]}</span>: text);
         return (
@@ -40,25 +52,41 @@ export default function About(){
 
     const firstHalfDropdowns = faqs.map((obj, index) => {
         if(index % 2 == 0){
-            return {...obj, key:{index}}
+            return {...obj, key: index}
         }
     })
 
     const secondHalfDropdowns = faqs.map((obj, index) => {
         if(index % 2 != 0){
-            return {...obj, key:{index}}
+            return {...obj, key: index}
         }
     })
     
+
+    // creating board cards from card data
+    // to be placed as a list in the jsx
     const boardCards = boardData.map((obj, index) => {
         return (
             <div key={index} className="card-content">
-                <img className="board-img" src={obj.img} alt="" />
+                {/* <img className="board-img" src={obj.img} alt="" /> */}
+                <img className="board-img" src={img0} alt="" />
                 <h2 className="body-text-one-font board-name-text">{obj.name}</h2>
                 <p className="body-text-two-font board-role-text">{obj.role}</p>
             </div>
         )
     })
+
+    //clicking on a link /about/#faq-section will scroll to the faq-section
+    //otherwise it will try and find the question
+    useEffect(() => {
+        const cssClass = window.location.href.substring(
+            window.location.href.lastIndexOf('#') + 1
+        );
+        const element = document.getElementsByClassName(cssClass)[0];
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, []);
 
     return (
         <>
@@ -69,16 +97,31 @@ export default function About(){
                 paragraph="Established in 2004, Davis Racing Dragons is a student-run collegiate-level dragonboat team. We strive to create a fun, welcoming, and tight-knit community for people of all experience levels. One of our main priorities is to offer our members an environment where they can grow as both an individual and within the team."
                 visual={<img src={aboutUsImage} className="about-us-img" alt="" />}
             />
-            <section className="board-members-section">
-                <h1 className="sub-heading-font">Board Members 2024-2025</h1>
-                <div className="board-card-container">
-                    {boardCards}
-                </div>
-                <div className="join-board-container">
-                    <h2 className="body-text-one-font board-interest-text">Interested in Joining Board?</h2>
-                    <Link className="secondary-button board-app-color">Board Application Form</Link>
-                </div>
-            </section>
+            {props.isMobile ? 
+                    <section className="board-dropdown-section">
+                        <Dropdown
+                            isExpanded={boardMemberDropdown}
+                            onClick={handleBoardDropdown}
+                            question="Board Members 2024-2025"
+                            answer={
+                                <div className="board-card-container">
+                                    {boardCards}
+                                </div>
+                            }
+                        />
+                    </section>
+                :
+                    <section className="board-members-section">
+                        <h1 className="sub-heading-font">Board Members 2024-2025</h1>
+                        <div className="board-card-container">
+                            {boardCards}
+                        </div>
+                        <div className="join-board-container">
+                            <h2 className="body-text-one-font board-interest-text">Interested in Joining Board?</h2>
+                            <Link className="secondary-button board-app-color">Board Application Form</Link>
+                        </div>
+                    </section>
+            }
 
             <section className="faq-section">
                 <div className="faq-content">

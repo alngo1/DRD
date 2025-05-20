@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router'
-import Navbar from '../navbar/Navbar'
 
 import "./menu.css"
 

@@ -1,35 +1,54 @@
 import NavLinks from "../navlinks/NavLinks.jsx"
 import Menu from "../menu/Menu.jsx"
 import logo from "../../assets/logo.png"
-import sandwhich from "../../assets/sandwhich icon.png"
 import './navbar.css'
 import {Link} from 'react-router'
 
-import {useState, useEffect} from "react"
+import {useState, useEffect, useRef} from "react"
 
 export default function Navbar(){
     const [showMenuLinks, setShowMenuLinks] = useState(false);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     
+    // Used to store window size 
+    // then to to conditionally adjust layout
+    useEffect(() => {
+        function changeWindowWidth(){
+            setWindowWidth(window.innerWidth);
+        }
+
+        window.addEventListener("resize", changeWindowWidth);
+        return function(){
+            console.log("clean up func")
+            window.removeEventListener("resize", changeWindowWidth);
+        }
+    }, []);
+
+    const isMobile = windowWidth <= 900;
+
     //if clicked show sandwhich
     function handleMenu(event){
         setShowMenuLinks(prevShow => !prevShow);
         window.scrollTo(0,0)
     }
 
-
-    //when menu is shown the side effect of pausing scroll and increasing nav size to full window height
+    //if screen sizes change "reset" showMenuLinks state back to false
     useEffect(() => {
-        window.scrollTo(0,0)
-        let body = document.getElementsByTagName("body")[0];
-        let nav = document.getElementsByTagName("nav")[0];
-        if(showMenuLinks){
-            body.style.overflow = "hidden";
-            nav.style.height = "100%";
-        } else {
-            body.style.overflow = "initial";
-            nav.style.height = "auto";
+        if(isMobile){
+            setShowMenuLinks(false);
         }
-    }, [showMenuLinks])
+    }, [isMobile])
+
+    //when menu button is shown stop scroll on body and change menu btn color
+    let body = document.getElementsByTagName("body")[0];
+    let menuButton = useRef(null);
+    if((showMenuLinks && isMobile) && menuButton.current != null){
+        body.style.overflow = "hidden";
+        menuButton.current.style.color = "#F4F9FA";
+    } else if (menuButton.current != null) {
+        body.style.overflow = "initial";
+        menuButton.current.style.color = "#02303E";
+    }
 
     return(
         <>
@@ -41,11 +60,11 @@ export default function Navbar(){
                 </div>
                 <NavLinks addJoin={true}/>
                 
-                {showMenuLinks && <Menu handleMenu={handleMenu}/>}
+                {(showMenuLinks && isMobile) && <Menu handleMenu={handleMenu}/>}
 
-                <button onClick={handleMenu} className="navbar-menu-button">
-                    <img src={sandwhich} alt="" />
-                </button>
+                {isMobile && <span ref={menuButton} onClick={handleMenu} className="material-symbols-outlined navbar-menu-button">
+                    menu
+                </span>}
             </nav>
         </>
     )

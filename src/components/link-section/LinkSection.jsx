@@ -2,7 +2,7 @@ import NavLinks from "../navlinks/NavLinks.jsx"
 import logo from "../../assets/logo.png"
 import './linksection.css'
 
-import icons from "../../assets/social_icons/social-icons.js"
+import icons from "./social-icons.js"
 
 import { Link } from "react-router"
 
@@ -24,7 +24,7 @@ export default function LinkSection() {
                     <p className="body-text-two-font link-section-team-name">Davis Racing Dragons</p>
                     <h1 className="body-text-one-font link-section-title">Dragonboat at UC Davis</h1>
                 </div>
-                <a className="primary-button" href="">Join</a>                
+                <Link className="primary-button" to="/join">Join</Link>
             </div>
             <div className="nav-and-socials-container">
                 <NavLinks addJoin={false}/>

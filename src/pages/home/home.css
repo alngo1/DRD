@@ -3,27 +3,33 @@ main {
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
+    min-height: 100%;
 }
 
-.home-team-photo {
-    background-image: url("../../assets/home/team.png");
-    height: 100%;
+
+
+.home-video{
+    position: absolute;
+    top: -150px;
+    min-height: 130%;
+    /* top: 0px;
+    min-height: 100%; */
     width: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-color: rgba(2, 48, 62, 1);
+    object-position: center;
+    object-fit: cover;
     z-index: -1;
 }
 
 /* DRD Hero */
 header {
+    min-height: 100%;
     color: #F4F9FA;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    overflow: hidden;
 }
+
 
 div.header-text-container {
     display: flex;
@@ -33,6 +39,8 @@ div.header-text-container {
     gap: 20px;
     padding: 0 50px;
 }
+
+
 
 .header-text-container > a {
     margin: 10px;
@@ -72,35 +80,65 @@ div.header-text-container {
 }
 
 
-@media only screen and (max-width: 780px){
-    .home-team-photo {
-        background: #D9D9D9;
+@media only screen and (max-width: 700px) and (max-height: 500px){
+    .home-video{
+        top: 0px;
+        min-height: 100%;
     }
-
-    .header-text-container > a > span{
+    header{
+        gap: 0;
+    }
+    .header-text-container{
+        gap: 0;
+        padding: 0;
+        line-height: 1;
+    }
+    .arrow-down{
         display: none;
     }
+}
 
+@media only screen and (max-width: 780px){
     div.header-text-container{
         align-items: center;
         text-align: center;
         color: #02303E;
+        padding: 0;
+    }
+    
+    .header-text-container > a > span{
+        display: none;
     }
 }
+/* @media only screen and (-webkit-min-device-pixel-ratio: 2){
+    div.header-text-container{
+        align-items: center;
+        text-align: center;
+        color: #02303E;
+        padding: 0;
+    }
+    
+    .header-text-container > a > span{
+        display: none;
+    }
+} */
 
 /* What is dragonboat */
 .what-is-db-section {
+    background-color: rgba(244, 249, 250, 1); 
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 100px;
 }
 .what-is-db-section > h1 {
+    display: none;
+}
+
+.what-is-db-header{
     margin: 0;
     color: rgba(0, 121, 146, 1);
     padding-bottom: 20px;
-    text-shadow: -0.5px -0.5px 0 rgba(0, 121, 146, 1), 0.5px -0.5px 0 rgba(0, 121, 146, 1), -0.5px 0.5px 0 rgba(0, 121, 146, 1), 1px 1px 0 rgba(0, 121, 146, 1);
-    display: none;
 }
 
 .what-is-db-content{
@@ -116,11 +154,9 @@ div.header-text-container {
     max-width: 500px;
 }
 
-.what-is-db-section-text-container > h1 {
-    color: rgba(0, 121, 146, 1);
-    padding-bottom: 20px;
+/* .what-is-db-section-text-container > h1 {
     text-shadow: -0.5px -0.5px 0 rgba(0, 121, 146, 1), 0.5px -0.5px 0 rgba(0, 121, 146, 1), -0.5px 0.5px 0 rgba(0, 121, 146, 1), 1px 1px 0 rgba(0, 121, 146, 1);
-}
+} */
 
 .what-is-db-content > img{
     width: 100%;
@@ -130,8 +166,16 @@ div.header-text-container {
 
 
 @media only screen and (max-width: 1200px){
+    main > nav{
+        background: none;
+    }
+
     .what-is-db-section > h1{
         display: block;
+    }
+    
+    .what-is-db-section-text-container{
+        margin-top: 40px;
     }
     
     .what-is-db-section-text-container > h1{
@@ -168,7 +212,7 @@ div.header-text-container {
 
 .our-story-content > img {
     width: 100%;
-    max-width: 500px; 
+    max-width: 500px;
     object-fit: contain;
     object-position: center;
     border-radius: 10px;
@@ -189,7 +233,7 @@ div.header-text-container {
     text-shadow: -0.5px -0.5px 0 rgba(0, 121, 146, 1), 0.5px -0.5px 0 rgba(0, 121, 146, 1), -0.5px 0.5px 0 rgba(0, 121, 146, 1), 1px 1px 0 rgba(0, 121, 146, 1);
 }
 
-.our-story-text>p {
+.our-story-text > p {
     display: block;
     color: rgba(244, 249, 250, 1);
     text-align: right;
@@ -212,10 +256,21 @@ div.header-text-container {
         justify-content: center;
     }
 
+    .our-story-text{
+        align-items: center;
+    }
+
     .our-story-text > h1{
         display: none;
     }
+
+    .our-story-text > p{
+        text-align: left;
+    }
+
 }
+
+
 
 /* What We Do Section */
 .what-we-do-section {
@@ -245,6 +300,7 @@ div.header-text-container {
     gap: 24px;
 }
 
+
 .what-we-do-image-container {
     max-width: 400px;
 }
@@ -258,8 +314,35 @@ div.header-text-container {
     aspect-ratio: 1/1;
 }
 
-.learn-more-colors {
+.learn-more-button {
     background-color: rgba(241, 176, 32, 1);
+}
+
+
+@media only screen and (max-width: 500px){
+    .what-we-do-section{
+        padding: 70px 50px;
+        gap: 32px;
+    }
+
+    .what-we-do-image{
+        aspect-ratio:  16/9;
+    }
+
+    .what-we-do-section > a {
+        padding: 10px 20px;
+
+        /* body text 2 */
+        font-weight: 400;
+        font-size: 1.2rem;
+        text-decoration: none;
+        margin: 0;
+    }
+
+    .card > h2{
+        color: #007992;
+        font-size: 1.2rem;
+    }
 }
 
 @media only screen and (max-width: 780px){

@@ -1,0 +1,4 @@
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+.mp4 filter=lfs diff=lfs merge=lfs -text
+races.mp4 filter=lfs diff=lfs merge=lfs -text
+test.mp4 filter=lfs diff=lfs merge=lfs -text

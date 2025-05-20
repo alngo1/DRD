@@ -45,6 +45,13 @@ export default function Join(){
                 <div className="join-faqs-container">
                     {faqs}
                 </div>
+                <div className="join-final-questions">
+                    <p className="body-text-one-font">Questions?</p>
+                    <div className="final-buttons">
+                        <Link onClick={()=>window.scrollTo(0,0)} to="/contacts" className="secondary-button">Contact Us</Link>
+                        <Link onClick={()=>window.scrollTo(0,0)} to="/about/#faq-section" className="secondary-button">FAQ</Link>
+                    </div>
+                </div>
             </section>
             <LinkSection/>
         </>

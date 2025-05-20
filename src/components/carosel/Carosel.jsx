@@ -28,6 +28,8 @@ export default function Carosel(props){
 
     //get ref of the container for the slides
     const slideContainer = React.useRef(null);
+    const scrollTrack = React.useRef(null);
+    const scrollThumb = React.useRef(null);
 
     //functions that move slides left or right
     function slideRight(){
@@ -45,6 +47,19 @@ export default function Carosel(props){
     //before first render everything is null
     if(slideContainer.current != null && slideRefs[0].current != null){
         slideContainer.current.scroll({top: 0, left: activeIndex * slideRefs[0].current.scrollWidth, behavior: "smooth"});
+        if(scrollThumb.current != null && scrollTrack.current != null){
+            //get the scroll width of the slide container
+            //get the current scroll position of slide container
+            const maxScrollWidth = slideContainer.current.scrollWidth;
+            const currentScrollPos = slideContainer.current.scrollLeft;
+
+            //get teh width of the scroll track
+            // curScroll / maxScroll = percentage to scroll between 0 and 1
+            // multiply by trackWidth to get number of pxToMove
+            const scrollTrackWidth = scrollTrack.current.clientWidth;
+            const pxToMove = (currentScrollPos / maxScrollWidth) * scrollTrackWidth;
+            scrollThumb.current.style.translate = `${pxToMove}px 0px`;
+        }
     }
     
     return(
@@ -62,6 +77,9 @@ export default function Carosel(props){
                     arrow_forward_ios
                 </span>
             </button>
+            <div ref={scrollTrack} className="scroll-track">
+                <div ref={scrollThumb} className="scroll-thumb"></div>
+            </div>
         </div>
     )
 }

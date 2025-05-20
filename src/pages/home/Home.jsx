@@ -1,5 +1,12 @@
-import homeTeamPhoto from "../../assets/home/team.png"
+//Home Video
+import videoSrc from "../../assets/home/drd.mp4"
+//Video Startup/Backup Poster
+import posterSrc from "../../assets/home/team.png"
+//What We Do Carosel Slides
+import slides from "./slides.js"
+//Our Story Photo
 import ourStory from "../../assets/home/ourstory.jpg"
+//Practice Section Cards
 import cards from "../../components/cards.js"
 // components
 import Carosel from "../../components/carosel/Carosel.jsx"
@@ -9,12 +16,11 @@ import Navbar from "../../components/navbar/Navbar.jsx"
 import './home.css'
 // react router
 import { Link } from 'react-router'
-//layout effect
 
-//carosel slides
-import slides from "./slides.js"
 
-export default function Home(){
+import { useRef, useEffect } from "react"
+
+export default function Home(props){
   
   const cardBlocks = cards.map((card, index) => {
     return (
@@ -28,32 +34,38 @@ export default function Home(){
     )
   })
   
+  const whatIsDBRef = useRef(null)
+  function handleArrowDown(){
+    whatIsDBRef.current.scrollIntoView({behavior: "smooth"});
+  }
+
   return (
     <>
-      {/* <video controls autoplay loop muted width="250px" height="250px" poster="../../assets/home/team.png">
-        <source src="../../assets/home/test.mp4" type="video/mp4" />
-        Your browser does not support the video/mp4 tag.
-      </video> */}
-      <main className="home-team-photo">
+      <video autoPlay muted loop playsInline poster={posterSrc} className="home-video">
+        <source src={videoSrc} type="video/mp4" />
+          Your browser does not support the video/mp4 tag.
+      </video>
+      <main>
         <Navbar/>
         <header>
           <div className="header-text-container">
             <h2 className="body-text-one-font">Est. 2004</h2>
             <h1 className="heading-font">Dragonboat at UC Davis</h1>
             <h2 className="body-text-one-font">Culture - Athleticism - Community</h2>
-            <a className="primary-button" href="">Join <span className="body-text-one-font">Now</span></a>
+            <Link className="primary-button" to="/join">Join <span className="body-text-one-font">Now</span></Link>
           </div>
           <div className="arrow-container">
-            <span className="material-icons arrow-down">keyboard_arrow_down</span>
+            <span onClick={handleArrowDown} className="material-icons arrow-down">keyboard_arrow_down</span>
           </div>
         </header>
       </main>
 
-      <section className="what-is-db-section">
-            <h1 className="sub-heading-font">What is dragonboat</h1>
+      <section ref={whatIsDBRef} className="what-is-db-section">
+            {/* 2 What is DB Headers One for Desktop one for Mobile */}
+            <h1 className="sub-heading-font what-is-db-header">What is dragonboat?</h1>
             <div className="what-is-db-content">
                 <div className="what-is-db-section-text-container">
-                  <h1 className="sub-heading-font">What is dragonboat</h1>
+                  <h1 className="sub-heading-font what-is-db-header">What is dragonboat?</h1>
                   <p className="body-text-two-font">Originating from China, this sport and festival has been a tradition for over 2,000 years. Today, dragon boat is enjoyed worldwide. A typical dragon boat crew consists of 20 people, in addition to a drummer and steersperson.</p>
                 </div>
                 <Carosel slides={slides}/>
@@ -75,7 +87,7 @@ export default function Home(){
         <div className="card-container">
           {cardBlocks}
         </div>
-        <a className="primary-button learn-more-colors" href="">Learn More</a>
+        <Link className="primary-button learn-more-button" to="/about">Learn More</Link>
       </section>
       <LinkSection />
     </>

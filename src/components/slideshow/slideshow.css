@@ -1,8 +1,7 @@
 .slideshow {
     width: 100%;
-    max-width: 1000px;
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
 .slideshow-slide-container{
@@ -18,7 +17,7 @@
 }
 
 .slideshow-slide-container::-webkit-scrollbar-track {
-    margin: 200px; /* shrinks track size*/
+    margin: 475px; /* shrinks track size*/
     background-color: #D9E4E6;
     border-radius: 10px;
 }
@@ -29,13 +28,11 @@
 }
 
 .slideshow-slide{
-    background-color: #02303E;
-    display: block;
+    background-color: red;
     border-radius: 10px;
-    width: 29%;
-    margin: 0 20px;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
+    aspect-ratio: 1/1;
 }
 
 .slideshow-button{
@@ -47,4 +44,17 @@
 .slideshow-button > span{
     color: #F4F9FA;
     font-size: 2rem;
+}
+
+
+@media only screen and (max-width: 1500px){
+    .slideshow-slide-container::-webkit-scrollbar-track{
+        margin: 350px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .slideshow-slide-container::-webkit-scrollbar-track{
+        margin: 250px;
+    }
 }

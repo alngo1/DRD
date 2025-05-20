@@ -1,14 +1,21 @@
 .q-and-a-container{
     background-color: rgba(217, 228, 230, 1);
     border-radius: 10px;
+    border: none;
+    padding: 40px 48px;
     width: 100%;
 }
 
-.dropdown-number{
-    margin: 0;
-    color: #007992;
-    padding: 0 30px;
-    width: 100px;
+
+.question-container{
+    background-color: rgba(217, 228, 230, 1);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    padding: 0;
 }
 
 .number-question-container{
@@ -16,93 +23,83 @@
     align-items: center;
 }
 
-.question-container{
-    background-color: rgba(217, 228, 230, 1);
-    border-radius: 10px;
-    border: none;
-    width: 100%;
-    min-height: 150px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+.dropdown-number{
+    margin-right: 80px;
+    display: inline;
+    color: #007992;
+}
+
+.question{
+    color: rgba(2, 48, 62, 1);
+    text-align: start;
+}
+
+.dropdown-arrow{
+    font-size: 3rem;
+    user-select: none;
+    color: rgba(2, 48, 62, 1);
+    transition: all 0.2s ease;
 }
 
 .expanded-background-color{
     background-color: rgba(217, 228, 230, 1);
 }
 
-.question{
-    color: rgba(2, 48, 62, 1);
-    padding: 0 20px;
-    text-align: start;
-}
-
-.question-container:hover{
-    background-color: rgb(169, 176, 177);
-    transition: all 0.2s ease;
-}
-
-span{
+.question span, .answer span{
     color: rgba(0, 121, 146, 1);
     font-weight: 700;
 }
 
 .answer{
-    /* display: none; */
-    max-width: 600px;
-    padding: 0 0 50px 50px;
-    font-family: "Lexend", sans-serif;
-    font-weight: 400;
-    font-size: 1.2rem;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    margin-top: 40px;
 }
 
-.answer > p{
-    max-width: 400px;
+
+.answer > p, .answer > ul > li{
+    text-align: left;
 }
 
-.dropdown-arrow{
-    font-size: 3rem;
-    color: rgba(2, 48, 62, 1);
-    transition: all 0.2s ease;
-    padding: 0 30px;
+.answer > a{
+    border: none;
+    background-color: #007992;
+    color: #F4F9FA;
+    cursor: pointer;
 }
 
 .expand{
     transform: rotate(-180deg);
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
 }
 
-@media only screen and (max-width: 1200px){
-    .answer{
-        padding: 50px;
+@media only screen and (max-width: 900px){
+    .q-and-a-container{
+        border-radius: 5px;
+        padding: 20px;
     }
-}
 
-@media only screen and (max-width: 780px){
     .question-container{
-        min-height: 100px;
+        height: auto
+    }
+
+    
+    .question span, .answer span{
+        font-weight: 500;
+    }
+    .answer{
+        gap: 15px;
+        margin-top: 15px;
     }
 }
 
 @media only screen and (max-width: 480px){
-    .question-container{
-        min-height: 50px;
-    }
 
-    .question{
-        font-family: "Viga", sans-serif;
-        font-weight: 400;
-        font-size: 0.7rem;
-    }
 
     .dropdown-number{
-        padding: 0;
+        margin-right: 10px;
         width: auto;
-    }
-
-    .dropdown-arrow{
-        padding: 0;
     }
 }

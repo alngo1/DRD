@@ -8,35 +8,42 @@ nav {
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
+    z-index: 3;
 }
 
 div.logo-container {
-    padding-bottom: 61px;
+    z-index: 1;
 }
 
 img.logo {
-    width: 3.25rem;
-    height: 2.65rem;
+    width: 70px;
+    height: 60px;
 }
 
 /* Menu Button Styles */
 .navbar-menu-button{
+    font-size: 60px;
     display: none;
+    transition: all ease 0.6s;
 }
 
-@media only screen and (max-width: 780px){
-    nav {
-        background: #D9D9D9;
-    }
 
+@media only screen and (max-width: 900px){
     .navbar-menu-button{
         display: block;
         background: none;
         border: none;
         cursor: pointer;
+        z-index: 1;
     }
 
     nav > .nav-link-container{
         display: none;
+    }
+}
+
+@media only screen and (max-height: 500px){
+    nav{
+        padding: 20px;
     }
 }

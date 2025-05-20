@@ -2,16 +2,27 @@ import './contact.css'
 import LinkSection from "../../components/link-section/LinkSection.jsx"
 import Navbar from "../../components/navbar/Navbar.jsx"
 import HeaderSection from "../../components/header-section/HeaderSection.jsx"
+import axios from 'axios'
 
 export default function Contact(){
 
-    function signUp(formData) {
+    async function signUp(formData) {
         const data = Object.fromEntries(formData)
         //.getAll is similar to .get but for multiple elements like with checkboxes
         const allData = {
             ...data,
         }
-        console.log(allData);
+        try {
+            const response = await axios.post("https://dn5vq5i4b1.execute-api.us-west-1.amazonaws.com/Prod", allData);
+        } catch (caught){
+            if (!caught.response) {
+                // Network error occurred
+                console.error('Network error:', caught);
+            } else {
+                // The server responded with a status other than 200 range
+                console.error('Error response:', caught.response);
+            }
+        }
     }
 
     return (
