@@ -22,8 +22,8 @@ export default function Dropdown(props){
     const arrowClasses = clsx("material-icons dropdown-arrow", props.isExpanded && "expand");
     const questionClasses = clsx("question-container", props.isExpanded && "expanded-background-color");
     return(
-        <div className="q-and-a-container">
-            <div onClick={props.onClick} className={questionClasses}>
+        <button onClick={props.onClick} className="q-and-a-container">
+            <div className={questionClasses}>
                 {props.displayNumber ?
                     <div className="number-question-container">
                         <p className="dropdown-number heading-font">{props.id}</p>
@@ -35,6 +35,6 @@ export default function Dropdown(props){
                 <span className={arrowClasses}>keyboard_arrow_down</span>
             </div>
             {props.isExpanded && props.answer}
-        </div>
+        </button>
     )
 }

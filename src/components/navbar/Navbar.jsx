@@ -44,28 +44,24 @@ export default function Navbar(){
     let menuButton = useRef(null);
     if((showMenuLinks && isMobile) && menuButton.current != null){
         body.style.overflow = "hidden";
-        menuButton.current.style.color = "#F4F9FA";
     } else if (menuButton.current != null) {
         body.style.overflow = "initial";
-        menuButton.current.style.color = "#02303E";
     }
 
     return(
-        <>
-            <nav>
-                <div className="logo-container">
-                    <Link to="/">
-                        <img className="logo" src={logo} alt="drd's dragon logo" />
-                    </Link>
-                </div>
+        <nav>
+            <div className="nav-content site-lr-padding content-max-width">
+                <Link className="logo-link" to="/">
+                    <img className="logo-img" src={logo} alt="drd's dragon logo" />
+                </Link>
                 <NavLinks addJoin={true}/>
                 
-                {(showMenuLinks && isMobile) && <Menu handleMenu={handleMenu}/>}
-
-                {isMobile && <span ref={menuButton} onClick={handleMenu} className="material-symbols-outlined navbar-menu-button">
+                {isMobile && <button ref={menuButton} onClick={handleMenu} className="material-symbols-outlined navbar-menu-button">
                     menu
-                </span>}
-            </nav>
-        </>
+                </button>}
+                
+                {(showMenuLinks && isMobile) && <Menu handleMenu={handleMenu}/>}
+            </div>
+        </nav>
     )
 }

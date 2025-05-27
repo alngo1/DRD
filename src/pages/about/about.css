@@ -1,32 +1,43 @@
 /* Board Members Section */
+.board-dropdown-section{
+    width: 100%;
+}
+
 .board-members-section{
     background-color: rgba(2, 48, 62, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px;
     gap: 112px;
     width: 100%;
-    min-height: 100%;
 }
 
-.board-members-section > h1{
+.board-members-section > h2{
+    width: 100%;
+    text-align: center;
     color: rgba(133, 207, 221, 1);
 }
 
 .board-card-container{
     width: 100%;
     display: grid;
-    justify-items: center;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 100px;
+}
 
-    padding: 0 100px;
+.card-content{
+    margin: 0;
+    padding: 0;
+
+    justify-self:center;
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
 }
 
 .board-img{
     width: 100%;
-    max-width: 300px;
     aspect-ratio: 1 / 1;
     border-radius: 10px;
     object-fit: cover;
@@ -44,22 +55,7 @@
     color: rgba(244, 249, 250, 1);
 }
 
-.join-board-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-}
-
-.board-interest-text{
-    color: rgba(133, 207, 221, 1);
-}
-
-.board-app-color{
-    background-color: rgba(241, 176, 32, 1);
-}
-
-@media only screen and (max-width: 850px){
+@media only screen and (max-width: 900px){
     .board-dropdown-section > .q-and-a-container{
         background-color: #02303E;
         border-radius: 0;
@@ -113,7 +109,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px;
 }
 
 .faq-content{

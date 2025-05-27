@@ -5,7 +5,7 @@ import discord from "../../assets/social_icons/./discord.png"
 
 export default [
     {
-        link: "https://linktr.ee/drddb",
+        link: "/contacts",
         img: mail
     },
     {
@@ -17,7 +17,7 @@ export default [
         img: youtube
     },
     {
-        link: "https://discord.com/invite/mrDQe32v9F",
+        link: "https://linktr.ee/drddb",
         img: discord
     }
 ]

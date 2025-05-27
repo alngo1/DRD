@@ -67,12 +67,14 @@ export default function About(props){
     // to be placed as a list in the jsx
     const boardCards = boardData.map((obj, index) => {
         return (
-            <div key={index} className="card-content">
+            <figure key={index} className="card-content">
                 {/* <img className="board-img" src={obj.img} alt="" /> */}
-                <img className="board-img" src={img0} alt="" />
-                <h2 className="body-text-one-font board-name-text">{obj.name}</h2>
-                <p className="body-text-two-font board-role-text">{obj.role}</p>
-            </div>
+                <img className="board-img" src={img0} alt={`Photo of ${obj.name}`} />
+                <figcaption className="card-text">
+                    <h2 className="body-text-one-font board-name-text">{obj.name}</h2>
+                    <p className="body-text-two-font board-role-text">{obj.role}</p>
+                </figcaption>
+            </figure>
         )
     })
 
@@ -91,51 +93,51 @@ export default function About(props){
     return (
         <>
             <Navbar/>
-            <HeaderSection
-                heading="About Us"
-                headingStyle="heading-font"
-                paragraph="Established in 2004, Davis Racing Dragons is a student-run collegiate-level dragonboat team. We strive to create a fun, welcoming, and tight-knit community for people of all experience levels. One of our main priorities is to offer our members an environment where they can grow as both an individual and within the team."
-                visual={<img src={aboutUsImage} className="about-us-img" alt="" />}
-            />
-            {props.isMobile ? 
-                    <section className="board-dropdown-section">
-                        <Dropdown
-                            isExpanded={boardMemberDropdown}
-                            onClick={handleBoardDropdown}
-                            question="Board Members 2024-2025"
-                            answer={
-                                <div className="board-card-container">
+            <main>
+                <article>
+                    <HeaderSection
+                        heading="About Us"
+                        headingStyle="heading-font"
+                        paragraph="Established in 2004, Davis Racing Dragons is a student-run collegiate-level dragonboat team. We strive to create a fun, welcoming, and tight-knit community for people of all experience levels. One of our main priorities is to offer our members an environment where they can grow as both an individual and within the team."
+                        visual={<img src={aboutUsImage} className="about-us-img" alt="drd members preparing to team chant" />}
+                    />
+                    {props.isMobile ? 
+                            <section className="board-dropdown-section">
+                                <Dropdown
+                                    isExpanded={boardMemberDropdown}
+                                    onClick={handleBoardDropdown}
+                                    question="Board Members 2024-2025"
+                                    answer={
+                                        <div className="board-card-container">
+                                            {boardCards}
+                                        </div>
+                                    }
+                                />
+                            </section>
+                        :
+                            <section className="board-members-section section-tb-padding">
+                                <h2 className="sub-heading-font">Board Members 2024-2025</h2>
+                                <div className="board-card-container content-max-width site-lr-padding ">
                                     {boardCards}
                                 </div>
-                            }
-                        />
-                    </section>
-                :
-                    <section className="board-members-section">
-                        <h1 className="sub-heading-font">Board Members 2024-2025</h1>
-                        <div className="board-card-container">
-                            {boardCards}
-                        </div>
-                        <div className="join-board-container">
-                            <h2 className="body-text-one-font board-interest-text">Interested in Joining Board?</h2>
-                            <Link className="secondary-button board-app-color">Board Application Form</Link>
-                        </div>
-                    </section>
-            }
+                            </section>
+                    }
 
-            <section className="faq-section">
-                <div className="faq-content">
-                    <h1 className="sub-heading-font faq-text-color">Frequently Asked Questions</h1>
-                    <div className="dropdown-container-container">
-                        <div className="dropdown-container">
-                            {firstHalfDropdowns}
+                    <section className="faq-section content-max-width site-lr-padding section-tb-padding">
+                        <div className="faq-content">
+                            <h1 className="sub-heading-font faq-text-color">Frequently Asked Questions</h1>
+                            <div className="dropdown-container-container">
+                                <div className="dropdown-container">
+                                    {firstHalfDropdowns}
+                                </div>
+                                <div className="dropdown-container">
+                                    {secondHalfDropdowns}
+                                </div>
+                            </div>
                         </div>
-                        <div className="dropdown-container">
-                            {secondHalfDropdowns}
-                        </div>
-                    </div>
-                </div>
-            </section>
+                    </section>
+                </article>
+            </main>
             <LinkSection/>
         </>
     )

@@ -77,9 +77,9 @@ export default function Carosel(props){
                     arrow_forward_ios
                 </span>
             </button>
-            <div ref={scrollTrack} className="scroll-track">
+            {/* <div ref={scrollTrack} className="scroll-track">
                 <div ref={scrollThumb} className="scroll-thumb"></div>
-            </div>
+            </div> */}
         </div>
     )
 }

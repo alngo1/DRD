@@ -6,12 +6,12 @@
 
 /* practice section */
 .practice-section{
+    width: 100%;
     background-color: rgba(2, 48, 62, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 112px;
-    padding: 128px 120px 120px 120px;
 }
 
 
@@ -38,26 +38,29 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 1000px;
     gap: 48px;
 }
 
 .practice-card{
     display: flex;
     align-items: center;
-    background-color: rgba(11, 77, 91, 1);
     border-radius: 10px;
     width: 100%;
 }
 
 .text-button-container{
+    background-color: rgba(11, 77, 91, 1);
+    width: 100%;
+    height: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px 72px;
-    width: 100%;
-    max-width: 50%;
+    justify-content: center;
     gap: 2em 0;
+
+    padding: 0px 72px;
+    border-radius: 0 10px 10px 0;
 }
 
 .practice-card-img{
@@ -105,6 +108,7 @@
     .text-button-container{
         max-width: none;
         padding: 30px;
+        border-radius: 10px;
     }
 }
 
@@ -140,11 +144,11 @@
 
 /* Races Section */
 .races-section{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 80px;
-    padding: 100px;
 }
 
 .races-section-text{
@@ -165,9 +169,10 @@
 }
 
 .races-media{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     gap: 60px
 }
 
@@ -179,6 +184,7 @@
 }
 
 .see-all-videos-container > video{
+    width: 100%;
     max-width: 400px;
     border-radius: 10px;
 }
@@ -201,11 +207,11 @@
 
 /* Socials Section */
 .socials-section{
+    width: 100%;
     background-color: rgba(2, 48, 62, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px;
     gap: 72px;
 }
 

@@ -17,21 +17,23 @@ export default function LinkSection() {
     });
 
     return (
-        <section className="link-section">
-            <div className="logo-and-join-container">
-                <div className="link-section-text">
-                    <img src={logo} alt="" />
-                    <p className="body-text-two-font link-section-team-name">Davis Racing Dragons</p>
-                    <h1 className="body-text-one-font link-section-title">Dragonboat at UC Davis</h1>
+        <footer className="link-section  section-tb-padding">
+            <div className="footer-content content-max-width site-lr-padding">
+                <div className="logo-and-join-container">
+                    <div className="link-section-text">
+                        <img src={logo} alt="" />
+                        <p className="body-text-two-font link-section-team-name">Davis Racing Dragons</p>
+                        <h3 className="body-text-one-font link-section-title">Dragonboat at UC Davis</h3>
+                    </div>
+                    <Link className="primary-button" to="/join">Join</Link>
                 </div>
-                <Link className="primary-button" to="/join">Join</Link>
-            </div>
-            <div className="nav-and-socials-container">
-                <NavLinks addJoin={false}/>
-                <div className="icon-link-container">
-                    {iconImages}
+                <div className="nav-and-socials-container">
+                    <NavLinks addJoin={false}/>
+                    <div className="icon-link-container">
+                        {iconImages}
+                    </div>
                 </div>
             </div>
-        </section>
+        </footer>
     )
 }

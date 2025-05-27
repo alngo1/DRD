@@ -12,6 +12,13 @@ html, body{
   height: 100svh;
 }
 
+main, article{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 @media only screen and (max-height: 500px){
   html, body{
     height: 100vh;
@@ -24,6 +31,41 @@ body{
   margin: 0;
   /* light grey background */
   background-color: rgba(244, 249, 250, 1); 
+}
+
+div#root{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CONTENT MAX WIDTH */
+.content-max-width{
+  width: 100%;
+  max-width: 1500px;
+}
+
+/* MARGINS/PADDING */
+.section-tb-padding{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.site-lr-padding{
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+@media only screen and (max-width: 780px){
+  .section-tb-padding{
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .site-lr-padding{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 /* FONTS */
