@@ -56,7 +56,7 @@ export default function Slideshow(props){
                 key={index}
                 className={clsx("slideshow-slide")}
                 src={obj.img} 
-                alt=""
+                alt={obj.alt}
                 width={`${imageWidth}px`}
                 style={{margin: `0px ${props.sideMargins}px`}}
             />

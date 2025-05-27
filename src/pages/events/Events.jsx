@@ -4,15 +4,15 @@ import Navbar from "../../components/navbar/Navbar.jsx"
 import HeaderSection from "../../components/header-section/HeaderSection.jsx"
 //import carosel and slides
 import Carosel from '../../components/carosel/Carosel.jsx'
-import slides from "./eventSlides.js"
+import racesSlides from "./racesSlides.js"
 //import slideshow and slides
 import Slideshow from "../../components/slideshow/Slideshow.jsx"
-import moreSlides from "./slideshowSlides.js"
+import socialSlides from "./socialsSlides.js"
 
 import eventImg from "../../assets/events/events.jpg"
-import img1 from "../../assets/events/practice1.jpg"
-import img2 from "../../assets/events/practice2.jpg"
-import img3 from "../../assets/events/practice3.jpg"
+import whenImg from "../../assets/events/when.jpg"
+import whereImg from "../../assets/events/where.jpg"
+import howImg from "../../assets/events/how.jpg"
 import raceVid from "../../assets/events/race.mp4"
 
 import { Link } from 'react-router'
@@ -32,7 +32,7 @@ export default function Events(props){
                         heading="Events"
                         headingStyle="heading-font"
                         paragraph="Davis Racing Dragons holds and participates in a variety of events throughout the year! These include our weekly practices, team socials, and dragonboat races."
-                        visual={<img src={eventImg} className="" alt="" />}
+                        visual={<img src={eventImg} className="" alt="Davis Racing Dragons Line Up Geared Up and Ready To Race" />}
                         // buttons={<button className="secondary-button event-button">View Full Calendar</button>}
                     />
                     <section className="practice-section section-tb-padding">
@@ -42,7 +42,7 @@ export default function Events(props){
                         </div>
                         <div className="card-section content-max-width site-lr-padding">
                             <div className="practice-card">
-                                {!props.isMobile && <img src={img1} className="practice-card-img" alt="" />}
+                                {!props.isMobile && <img src={whenImg} className="practice-card-img" alt="Davis Racing Dragons On Boat At Practice Mogging the Camera. Their Jawline Razor Cutting Shhh" />}
                                 <div className="text-button-container">
                                     <div className="practice-card-text">
                                         <h2 className={textQuestionClass}>When</h2>
@@ -55,7 +55,7 @@ export default function Events(props){
                                 </div>
                             </div>
                             <div className="practice-card">
-                                {!props.isMobile && <img src={img2} className="practice-card-img" alt="" />}
+                                {!props.isMobile && <img src={whereImg} className="practice-card-img" alt="Davis Racing Dragons On Land After Halloween Practice Costumes in Tow" />}
                                 <div className="text-button-container">
                                     <div className="practice-card-text">
                                         <h2 className={textQuestionClass}>Where</h2>
@@ -68,7 +68,7 @@ export default function Events(props){
                                 </div>
                             </div>
                             <div className="practice-card">
-                                {!props.isMobile && <img src={img3} className="practice-card-img" alt="" />}
+                                {!props.isMobile && <img src={howImg} className="practice-card-img" alt="A Bright Day Davis Racing Dragons On Boat" />}
                                 <div className="text-button-container">
                                     <div className="practice-card-text">
                                         <h2 className={textQuestionClass}>How</h2>
@@ -90,7 +90,7 @@ export default function Events(props){
                             <p className="body-text-one-font">We compete in both local and away races against teams from all over the world!</p>
                         </div>
                         <div className="races-media content-max-width site-lr-padding">
-                            <Carosel slides={slides}/>
+                            <Carosel slides={racesSlides}/>
                             <div className="see-all-videos-container">
                                 <video controls autoPlay muted alt="">
                                     <source src={raceVid} />
@@ -105,10 +105,10 @@ export default function Events(props){
                             <p className="body-text-one-font">Join the team for fun bonding time off the water!</p>
                         </div>
                         {props.isMobile ?
-                                <Carosel slides={moreSlides}/>
+                                <Carosel slides={socialSlides}/>
                             :
                                 <Slideshow 
-                                    slides={moreSlides}
+                                    slides={socialSlides}
                                     slideWidth={368}
                                     sideMargins={20}
                                     windowSize={3}

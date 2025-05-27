@@ -21,7 +21,7 @@ export default function Carosel(props){
                 key={index}
                 className={clsx("slide")}
                 src={obj.img} 
-                alt="" 
+                alt={obj.alt} 
             />
         )
     });

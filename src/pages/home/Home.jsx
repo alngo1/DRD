@@ -39,7 +39,7 @@ export default function Home(props){
 
   return (
     <>
-      <header>
+      <header className="home-header">
         <Navbar/>
         <div className="header-text-container content-max-width site-lr-padding">
           <h1 className="heading-font">
@@ -53,11 +53,11 @@ export default function Home(props){
             <button onClick={handleArrowDown} className="material-icons arrow-down">keyboard_arrow_down</button>
           </div>
         </div>
-        <video autoPlay muted loop playsInline poster={posterSrc} className="home-video">
-          <source src={videoSrc} type="video/mp4" />
-            Your browser does not support the video/mp4 tag.
-        </video>
       </header>
+      <video autoPlay muted loop playsInline poster={posterSrc} className="home-video">
+        <source src={videoSrc} type="video/mp4" />
+          Your browser does not support the video/mp4 tag.
+      </video>
       <main>
         <article>
           <section ref={whatIsDBRef} className="what-is-db-section section-tb-padding">

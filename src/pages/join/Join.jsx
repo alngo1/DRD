@@ -39,20 +39,24 @@ export default function Join(){
     return (
         <>
             <Navbar/>
-            <section className="join-section">
-                <h1 className="heading-font">Join</h1>
-                <p className="body-text-two-font">Learn more about how to join Davis Racing Dragons!</p>
-                <div className="join-faqs-container">
-                    {faqs}
-                </div>
-                <div className="join-final-questions">
-                    <p className="body-text-one-font">Questions?</p>
-                    <div className="final-buttons">
-                        <Link onClick={()=>window.scrollTo(0,0)} to="/contacts" className="secondary-button">Contact Us</Link>
-                        <Link onClick={()=>window.scrollTo(0,0)} to="/about/#faq-section" className="secondary-button">FAQ</Link>
-                    </div>
-                </div>
-            </section>
+            <main>
+                <article>
+                    <section className="join-section section-tb-padding content-max-width site-lr-padding">
+                        <h1 className="heading-font">Join</h1>
+                        <p className="body-text-two-font">Learn more about how to join Davis Racing Dragons!</p>
+                        <div className="join-faqs-container">
+                            {faqs}
+                        </div>
+                        <div className="join-final-questions">
+                            <p className="body-text-one-font">Questions?</p>
+                            <div className="final-buttons">
+                                <Link onClick={()=>window.scrollTo(0,0)} to="/contacts" className="secondary-button">Contact Us</Link>
+                                <Link onClick={()=>window.scrollTo(0,0)} to="/about/#faq-section" className="secondary-button">FAQ</Link>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </main>
             <LinkSection/>
         </>
     )
