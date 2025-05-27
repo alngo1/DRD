@@ -17,7 +17,7 @@
 }
 
 .slideshow-slide-container::-webkit-scrollbar-track {
-    margin: 475px; /* shrinks track size*/
+    margin: 445px; /* shrinks track size*/
     background-color: #D9E4E6;
     border-radius: 10px;
 }
@@ -28,7 +28,7 @@
 }
 
 .slideshow-slide{
-    background-color: red;
+    /* width defined in jsx */
     border-radius: 10px;
     object-fit: cover;
     object-position: center;
@@ -38,6 +38,7 @@
 .slideshow-button{
     border: none;
     background: none;
+    cursor: pointer;
     padding-bottom: 40px; /* pushes track from image slides*/
 }
 
@@ -46,6 +47,9 @@
     font-size: 2rem;
 }
 
+.slideshow-button > span:hover{
+    color: rgba(133, 207, 221, 1);
+}
 
 @media only screen and (max-width: 1500px){
     .slideshow-slide-container::-webkit-scrollbar-track{

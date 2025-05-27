@@ -8,7 +8,7 @@ export default function HeaderSection(props) {
     const classes = clsx(props.headingStyle);
 
     return (
-        <section className="header-section site-lr-padding content-max-width">
+        <section className="header-section section-tb-padding site-lr-padding content-max-width">
             <h1 className={classes}>{props.heading}</h1>
             <div className="header-content">
                 <div className="header-section-text-container">

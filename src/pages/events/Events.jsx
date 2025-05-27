@@ -46,11 +46,13 @@ export default function Events(props){
                                 <div className="text-button-container">
                                     <div className="practice-card-text">
                                         <h2 className={textQuestionClass}>When</h2>
-                                        <p className="body-text-two-font">Every Saturday from 9AM-12PM</p>
-                                        <ul className="body-text-two-font">
-                                            <li>Including travel time: 8AM - 1PM</li>
-                                            <li>We often go out to eat afterwards!</li>
-                                        </ul>
+                                        <div className="practice-info">
+                                            <p className="body-text-two-font">Every Saturday from 9AM-12PM</p>
+                                            <ul className="body-text-two-font">
+                                                <li>Including travel time: 8AM - 1PM</li>
+                                                <li>We often go out to eat afterwards!</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -59,11 +61,13 @@ export default function Events(props){
                                 <div className="text-button-container">
                                     <div className="practice-card-text">
                                         <h2 className={textQuestionClass}>Where</h2>
-                                        <p className="body-text-two-font">Suisun City Marina</p>
-                                        <ul className="body-text-two-font">
-                                            <li>800 Kellogg St, Suisun City, CA 94585</li>
-                                            <li>30 - 40 min drive from Davis</li>
-                                        </ul>
+                                        <div className="practice-info">
+                                            <p className="body-text-two-font">Suisun City Marina</p>
+                                            <ul className="body-text-two-font">
+                                                <li>800 Kellogg St, Suisun City, CA 94585</li>
+                                                <li>30 - 40 min drive from Davis</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -72,8 +76,10 @@ export default function Events(props){
                                 <div className="text-button-container">
                                     <div className="practice-card-text">
                                         <h2 className={textQuestionClass}>How</h2>
-                                        <p className="body-text-two-font">Carpool and equipment provided!</p>
-                                        <p className="body-text-two-font">See our FAQ page for more info on what to bring to practices!</p>
+                                        <div className="practice-info">
+                                            <p className="body-text-two-font">Carpool and equipment provided!</p>
+                                            <p className="body-text-two-font">See our FAQ page for more info on what to bring to practices!</p>
+                                        </div>
                                     </div>
                                     <Link to="/about/#faq-section" className="secondary-button">What to bring</Link>
                                 </div>
@@ -109,7 +115,7 @@ export default function Events(props){
                             :
                                 <Slideshow 
                                     slides={socialSlides}
-                                    slideWidth={368}
+                                    slideWidth={333}
                                     sideMargins={20}
                                     windowSize={3}
                                 />

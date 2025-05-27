@@ -14,23 +14,15 @@
     gap: 112px;
 }
 
-
-
 .practice-section-text{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
     text-align: center;
-}
-
-.practice-section-text > h2{
-    font-family: Viga;
-    font-weight: 400;
-    padding-bottom: 20px;
 }
 
 .practice-section-text > p{
     color: rgba(244, 249, 250, 1);
-    font-family: Lexend;
-    font-weight: 500;
-    font-size: 18px;
 }
 
 .card-section{
@@ -44,36 +36,58 @@
 .practice-card{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     border-radius: 10px;
     width: 100%;
-}
-
-.text-button-container{
-    background-color: rgba(11, 77, 91, 1);
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2em 0;
-
-    padding: 0px 72px;
-    border-radius: 0 10px 10px 0;
 }
 
 .practice-card-img{
     width: 100%;
     max-width: 50%;
+    height: 400px;
     object-fit: cover;
     object-position: center;
     border-radius: 10px 0 0 10px;
 }
 
+.text-button-container{
+    background-color: rgba(11, 77, 91, 1);
+    width: 100%;
+    max-width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 32px;
+
+    padding: 64px 72px;
+    border-radius: 0 10px 10px 0;
+}
+
 .practice-card-text{
     color: rgba(244, 249, 250, 1);
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 32px;
+}
+
+.practice-card-text > h2{
+    color: rgba(244, 249, 250, 1);
+}
+
+.practice-info{
+    line-height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.practice-card-text > ul{
+    margin: 0;
 }
 
 .text-button-container > button{
@@ -95,50 +109,60 @@
     background-color: rgba(241, 176, 32, 1);
 }
 
-
-@media only screen and (max-width: 900px){
-    .practice-card{
-        flex-wrap: wrap;
-    }
-
-    .practice-card-img{
-        max-width: none;
-    }
-
+@media only screen and (max-width: 1400px){
     .text-button-container{
-        max-width: none;
-        padding: 30px;
-        border-radius: 10px;
+        gap: 0;
+    }
+    .practice-card-text{
+        justify-content: center;
+        gap: 0;
+    }
+    .practice-info{
+        line-height: 35px;
     }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 1200px){
+    .text-button-container{
+        padding: 28px 32px;
+        justify-content: center;
+    }
+    .practice-info{
+        line-height: 25px;
+    }
+}
+
+@media only screen and (max-width: 900px){
     .practice-section{
         padding: 60px 25px;
         gap: 40px;
     }
-
-    .practice-card{
-        border-radius: 5px;
-    }
-
-    .practice-card-text{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        gap: 10px;
-    }
-
-    .practice-card-text > ul{
-        margin: 0;
-    }
-
+    
     .text-button-container{
-        padding: 30px;
+        max-width: none;
+        border-radius: 5px;
+        gap: 16px;
+        align-items: start;
+    }
+    
+    .practice-info{
+        line-height: 100%;
+        gap: 8px;
+    }
+    
+    .practice-card-text{
+        max-width: 300px;
+        gap: 8px;
     }
 
     .join-team-container{
         gap: 15px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .text-button-container{
+        align-items: center;
     }
 }
 
@@ -165,14 +189,15 @@
 
 .races-section-text > p{
     padding: 0 50px;
-    max-width: 700px;
+    max-width: 800px;
 }
 
 .races-media{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: start;
     gap: 60px
 }
 
@@ -185,13 +210,23 @@
 
 .see-all-videos-container > video{
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
+    height: 334px;
     border-radius: 10px;
 }
 
 .see-all-videos-container > a{
     border: none;
     background-color: rgba(241, 176, 32, 1);
+}
+
+@media only screen and (max-width: 1400px){
+    .races-media{
+        justify-content: center;        
+    }
+    .see-all-videos-container > video{
+        height: auto;
+    }
 }
 
 @media only screen and (max-width: 780px){
@@ -227,6 +262,18 @@
 @media only screen and (max-width: 1400px){
     .socials-section{
         padding: 25px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .socials-section > .carosel > .slide-container{
+        overflow-y: hidden;
+        height: 333px;
+    }
+    .socials-section > .carosel > .slide-container > .slide{
+        height: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
     }
 }
 
