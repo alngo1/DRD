@@ -48,12 +48,12 @@ div#root{
 /* MARGINS/PADDING */
 .section-tb-padding{
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 140px;
 }
 
 .site-lr-padding{
-  padding-left: 140px;
-  padding-right: 140px;
+  padding-left: 120px;
+  padding-right: 120px;
 }
 
 @media only screen and (max-width: 780px){

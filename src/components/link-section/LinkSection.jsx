@@ -17,7 +17,7 @@ export default function LinkSection() {
     });
 
     return (
-        <footer className="link-section  section-tb-padding">
+        <footer className="link-section section-tb-padding">
             <div className="footer-content content-max-width site-lr-padding">
                 <div className="logo-and-join-container">
                     <div className="link-section-text">
@@ -25,7 +25,7 @@ export default function LinkSection() {
                         <p className="body-text-two-font link-section-team-name">Davis Racing Dragons</p>
                         <h3 className="body-text-one-font link-section-title">Dragonboat at UC Davis</h3>
                     </div>
-                    <Link className="primary-button" to="/join">Join</Link>
+                    <Link onClick={() => {window.scroll(0,0)}} className="primary-button" to="/join">Join</Link>
                 </div>
                 <div className="nav-and-socials-container">
                     <NavLinks addJoin={false}/>

@@ -49,7 +49,7 @@ export default function Events(props){
                                         <div className="practice-info">
                                             <p className="body-text-two-font">Every Saturday from 9AM-12PM</p>
                                             <ul className="body-text-two-font">
-                                                <li>Including travel time: 8AM - 1PM</li>
+                                                <li>Including travel time: 12am-12am</li>
                                                 <li>We often go out to eat afterwards!</li>
                                             </ul>
                                         </div>
