@@ -1,5 +1,4 @@
-import aboutUsImage from "../../assets/about/aboutus.jpg"
-import boardData from "./boardData.js"
+import assets from "../../assets.json"
 import dropdownData from "./faqData.jsx"
 // Components
 import LinkSection from "../../components/link-section/LinkSection.jsx"
@@ -13,7 +12,6 @@ import { Link } from "react-router"
 // state
 import { useState, useEffect } from "react"
 
-import img0 from "../../assets/about/board_photos/default.png"
 
 
 export default function About(props){
@@ -65,11 +63,11 @@ export default function About(props){
 
     // creating board cards from card data
     // to be placed as a list in the jsx
-    const boardCards = boardData.map((obj, index) => {
+    const boardCards = assets["About"]["Board"].map((obj, index) => {
         return (
             <figure key={index} className="card-content">
                 {/* <img className="board-img" src={obj.img} alt="" /> */}
-                <img className="board-img" src={img0} alt={`Photo of ${obj.name}`} />
+                <img className="board-img" src={assets["About"]["Board Default"]} alt={`Photo of ${obj.name}`} />
                 <figcaption className="card-text">
                     <h2 className="body-text-one-font board-name-text">{obj.name}</h2>
                     <p className="body-text-two-font board-role-text">{obj.role}</p>
@@ -99,7 +97,7 @@ export default function About(props){
                         heading="About Us"
                         headingStyle="heading-font"
                         paragraph="Established in 2004, Davis Racing Dragons is a student-run collegiate-level dragonboat team. We strive to create a fun, welcoming, and tight-knit community for people of all experience levels. One of our main priorities is to offer our members an environment where they can grow as both an individual and within the team."
-                        visual={<img src={aboutUsImage} className="about-us-img" alt="drd members preparing to team chant" />}
+                        visual={<img src={assets["About"]["Header"].img} className="about-us-img" alt={assets["About"]["Header"].alt} />}
                     />
                     {props.isMobile ? 
                             <section className="board-dropdown-section">

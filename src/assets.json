@@ -1,0 +1,201 @@
+{
+    "Home": {
+        "main-video" : "./assets/home/drd.mp4",
+        "video-poster-img": "./assets/home/team.png",
+        "what-is-db-slides": [
+            {
+                "img": "./assets/home/whatisdb1.jpg",
+                "alt": "drd paddling"
+            }, 
+            {
+                "img": "./assets/home/whatisdb2.jpg",
+                "alt": "drd paddling"
+            },
+            {
+                "img": "./assets/home/whatisdb3.jpg",
+                "alt": "drd paddling... probably"
+            }
+        ],
+        "our-story": {
+            "img": "./assets/home/ourstory.jpg",
+            "alt": "A Photo of DRD to End Race Day"
+        },
+        "what-we-do-cards": [
+            {
+                "img": "./assets/home/card1.jpg",
+                "alt": "drd paddling",
+                "text": "Practices"
+
+            }, 
+            {
+                "img": "./assets/home/card2.jpg",
+                "alt": "drd paddling",
+                "text": "Races"
+            },
+            {
+                "img": "./assets/home/card3.jpg",
+                "alt": "drd paddling... probably",
+                "text": "Socials"
+            }
+        ]
+    },
+    "About": {
+        "Header": {
+            "img": "./assets/about/aboutus.jpg",
+            "alt": "drd members team chant"
+        },
+        "Board" : [
+            {
+                "img": "./assets/about/board_photos/1.jpg",
+                "name": "Lily Wen",
+                "role": "President"
+            },
+            
+            {
+                "img": "./assets/about/board_photos/2.jpg",
+                "name": "Allison Mar",
+                "role": "Vice President"
+            },
+            {
+                "img": "./assets/about/board_photos/3.jpg",
+                "name": "Reagan Ochalek",
+                "role": "Head Coach"
+            },
+            {
+                "img": "./assets/about/board_photos/4.jpg",
+                "name": "Mckayla Ma",
+                "role": "Coach"
+            },
+            {
+                "img": "./assets/about/board_photos/5.jpg",
+                "name": "Justin Thang",
+                "role": "Coach"
+            },
+            {
+                "img": "./assets/about/board_photos/6.jpg",
+                "name": "Braden Lee",
+                "role": "Director of Internal Affairs"
+            },
+            {
+                "img": "./assets/about/board_photos/7.jpg",
+                "name": "Marianne Lee-Dodson",
+                "role": "Treasurer"
+            },
+            {
+                "img": "./assets/about/board_photos/8.jpg",
+                "name": "Sean Elmore",
+                "role": "Fundraising Chair"
+            },
+            {
+                "img": "./assets/about/board_photos/9.jpg",
+                "name": "Danh Nguyen",
+                "role": "Events Coordinator"
+            },
+            {
+                "img": "./assets/about/board_photos/9.jpg",
+                "name": "Katherine Vo",
+                "role": "Director of Marketing"
+            },
+            {
+                "img": "./assets/about/board_photos/9.jpg",
+                "name": "Alice Ngo",
+                "role": "Historian"
+            }
+        ],
+        "Board Default": {
+            "img": "./assets/about/board_photos/default.png",
+            "alt": "team photo"
+        },
+        "FAQLinks": {
+            "Paddler Info Form": "https://www.youtube.com/watch?v=eHmVLr-cW70",
+            "DRD Youtube": "https://www.youtube.com/watch?v=eHmVLr-cW70",
+            "Join": "/join",
+            "Follow Us Here": "https://linktr.ee/drddb"
+        }
+    },
+    "Events": {
+        "Header": {
+            "img": "./assets/events/events.jpg",
+            "alt": "Davis Racing Dragons Line Up Geared Up and Ready To Race"
+        },
+        "When": {
+            "img": "./assets/events/when.jpg",
+            "alt": "Davis Racing Dragons On Boat At Practice Mogging the Camera. Their Jawline Razor Cutting Shhh"
+        },
+        "Where": {
+            "img": "./assets/events/where.jpg",
+            "alt": "Davis Racing Dragons On Land After Halloween Practice Costumes in Tow"
+        },
+        "How": {
+            "img": "./assets/events/how.jpg",
+            "alt": "A Bright Day On The Water Davis Racing Dragons On Boat"
+        },
+        "Race Video": "./assets/events/race.mp4",
+        "Race Slides": [
+            {
+                "img": "./assets/events/races/races1.jpg",
+                "alt": "Davis Racing Dragons Group Photo With Banner After Race Day"
+            },
+            {
+                "img": "./assets/events/races/races2.jpg",
+                "alt": "Davis Racing Dragons Womens Team On Boat and Hone In Before Race Begins"
+            },
+            {
+                "img": "./assets/events/races/races3.jpg",
+                "alt": "Davis Racing Dragons Mens Team On Boat Preparing to Leave Docks On Race Day"
+            }
+        ],
+        "Social Slides": [
+            {
+                "img": "./assets/events/socials/socials1.jpg",
+                "alt": "Davis Racing Dragons Group Selfie On Sunny Day Around Food Stalls"
+            },
+            {
+                "img": "./assets/events/socials/socials2.jpg",
+                "alt": "Davis Racing Dragons In Fancy Attire For Yearly Formal. Theme is White and Gold Stars. Funny Group Photo"
+            },
+            {
+                "img": "./assets/events/socials/socials3.jpg",
+                "alt": "Davis Racing Dragons Bracelet Making at the Park On a Sunny Day"
+            },
+            {
+                "img": "./assets/events/socials/socials4.jpg",
+                "alt": "Davis Racing Dragons Dressed Up Once Again for Their Yearly Formal. Theme Enchanted Forest. All Smiles"
+            },
+            {
+                "img": "./assets/events/socials/socials5.jpg",
+                "alt": "Davis Racing Dragons Hanging Out. Holding Their Newly Aquired White Elephant Gifts. Ice Spice American Flag Included"
+            },
+            {
+                "img": "./assets/events/socials/socials6.jpg",
+                "alt": "Davis Racing Dragons Group Photo Dressed for Lunar New Year Paper Bag Lion Making"
+            }
+        ]
+    },
+    "Social": [
+        {
+            "img": "./assets/social_icons/mail.png",
+            "alt": "envelope icon",
+            "link": "/contacts"
+        },
+        {
+            "img": "./assets/social_icons/insta.png",
+            "alt": "instagram icon",
+            "link": "https://www.instagram.com/davis.racing.dragons/"
+        },
+        {
+            "img": "./assets/social_icons/youtube.png",
+            "alt": "youtube icon",
+            "link": "https://www.youtube.com/channel/UCfdURDNouXbfKIrnfXnoQdg"
+        },
+        {
+            "img": "./assets/social_icons/discord.png",
+            "alt": "discord icon",
+            "link": "https://linktr.ee/drddb"
+        }
+    ],
+    "Logo": {
+        "img": "./assets/logo.png",
+        "alt": "drd's dragon logo"
+    }
+}

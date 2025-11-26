@@ -1,4 +1,5 @@
 import { Link } from "react-router"
+import assets from "../../assets.json"
 
 export default [
     {
@@ -33,7 +34,7 @@ export default [
         answer: <div className="answer">
             <p className="body-text-two-font"><span>Yes</span>, we provide paddles and personal flotation devices (PFDs) at every practice.</p>
             <p className="body-text-two-font">Be sure to fill out our “<strong>DRD Paddler Practice Information</strong>” form so we can plan equipment accordingly.</p>
-            <a href="https://www.youtube.com/watch?v=eHmVLr-cW70" className="secondary-button">Paddler Info Form</a>
+            <a href={assets["About"]["FAQLinks"]["Paddler Info Form"]} target="_blank" className="secondary-button">Paddler Info Form</a>
         </div>,
         expanded: false
     },
@@ -123,7 +124,7 @@ export default [
             <p className="body-text-two-font">Team fees mostly go towards paying drivers back for gas and socials.</p>
             <p className="body-text-two-font"><span>California Dragon Boat Association Fees</span></p>
             <p className="body-text-two-font">The California Dragon Boat Association (CDBA) organizes many of the teams and races in Northern California. Being a college team within CDBA, each member must pay $80 per calendar year.</p>
-            <Link onClick={()=> window.scrollTo(0, 0)} className="secondary-button" to="/join">Join</Link>
+            <Link onClick={()=> window.scrollTo(0, 0)} className="secondary-button" to={assets["About"]["FAQLinks"]["Join"]} >Join</Link>
             <p className="body-text-two-font">Check out our “Join” page to learn more!</p>
         </div>,
         expanded: false
@@ -136,7 +137,7 @@ export default [
             <p className="body-text-two-font">Races are one of the <strong>best parts</strong> of dragonboat! They&#39;re exciting, fun, and you get to spend the entire day with the team showing off your hard work and winning medals! </p>
             <p className="body-text-two-font">We usually participate in <strong>four</strong> races during the school year, and <strong>one</strong> in the summer. Races generally span between 1-2 days and will take the entire day.</p>
             <p className="body-text-two-font"><strong>Race fees</strong> are required for each race you attend (separate from team fees), and vary depending on the race.</p>
-            <a target="_blank" href="https://www.youtube.com/channel/UCfdURDNouXbfKIrnfXnoQdg" className="secondary-button">DRD Youtube</a>
+            <a target="_blank" href={assets["About"]["FAQLinks"]["DRD Youtube"]} className="secondary-button">DRD Youtube</a>
             <p className="body-text-two-font">Check out our race videos and vlogs here!</p>
         </div>,
         expanded: false
@@ -147,7 +148,7 @@ export default [
         spanIndex: 1,
         answer: <div className="answer">
             <p className="body-text-two-font">The best ways to stay up-to-date on everything happening with the team is by joining our <strong>Discord!</strong> Following us on <strong>Instagram</strong> is also a good way to get updates.</p>
-            <a className="secondary-button" target="_blank" href="https://linktr.ee/drddb">Join & follow us here!</a>
+            <a className="secondary-button" target="_blank" href={assets["About"]["FAQLinks"]["Follow Us Here"]}>Join & follow us here!</a>
         </div>,
         expanded: false
     },

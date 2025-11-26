@@ -1,13 +1,5 @@
-//Home Video
-import videoSrc from "../../assets/home/drd.mp4"
-//Video Startup/Backup Poster
-import posterSrc from "../../assets/home/team.png"
-//What We Do Carosel Slides
-import slides from "./slides.js"
-//Our Story Photo
-import ourStory from "../../assets/home/ourstory.jpg"
-//Practice Section Cards
-import cards from "./cards.js"
+import assets from "../../assets.json"
+
 // components
 import Carosel from "../../components/carosel/Carosel.jsx"
 import LinkSection from "../../components/link-section/LinkSection.jsx"
@@ -22,7 +14,7 @@ import { useRef, useEffect } from "react"
 
 export default function Home(props){
   
-  const cardBlocks = cards.map((card, index) => {
+  const cardBlocks = assets["Home"]["what-we-do-cards"].map((card, index) => {
     return (
       <figure key={index} className="card">
         <img className="what-we-do-image" src={card.img} alt="" />
@@ -54,8 +46,8 @@ export default function Home(props){
           </div>
         </div>
       </header>
-      <video autoPlay muted loop playsInline poster={posterSrc} className="home-video">
-        <source src={videoSrc} type="video/mp4" />
+      <video autoPlay muted loop playsInline poster={assets["Home"]["video-poster-img"]} className="home-video">
+        <source src={assets["Home"]["main-video"]} type="video/mp4" />
           Your browser does not support the video/mp4 tag.
       </video>
       <main>
@@ -68,13 +60,13 @@ export default function Home(props){
                       <h2 className="sub-heading-font what-is-db-header">What is dragonboat?</h2>
                       <p className="body-text-two-font">Originating from China, this sport and festival has been a tradition for over 2,000 years. Today, dragon boat is enjoyed worldwide. A typical dragon boat crew consists of 20 people, in addition to a drummer and steersperson.</p>
                     </div>
-                    <Carosel slides={slides}/>
+                    <Carosel slides={assets["Home"]["what-is-db-slides"]}/>
                 </div>
             </section>
           <section className="our-story-section section-tb-padding">
             <h2 className="sub-heading-font">Our Story</h2>
             <div className="our-story-content content-max-width site-lr-padding">
-              <img src={ourStory} alt="A Photo of DRD to End Race Day"/>
+              <img src={assets["Home"]["our-story"]["img"]} alt={assets["Home"]["our-story"]["alt"]}/>
               <div className="our-story-text">
                 <h2 className="sub-heading-font">Our Story</h2>
                 <p className="body-text-two-font">Davis Racing Dragons was established in 2004 by students who wanted to bring collegiate-level dragonboat to UC Davis. Since then, we have always strived to create a fun, welcoming community built on teamwork and competitive excellence. </p>

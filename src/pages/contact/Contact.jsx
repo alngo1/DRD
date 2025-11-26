@@ -38,12 +38,12 @@ export default function Contact(){
                     <form className="contact-form" action={signUp}>
                         <label htmlFor="firstName">
                             First Name
-                            <input type="text" id="firstName" name="firstName" defaultValue="Alex"/>
+                            <input type="text" id="firstName" name="firstName" defaultValue="Joe"/>
                         </label>
 
                         <label htmlFor="lastName">
                             Last Name
-                            <input type="text" id="lastName" name="lastName" defaultValue="Ngo"/>
+                            <input type="text" id="lastName" name="lastName" defaultValue="Schmoe"/>
                         </label>
                         
                         <label htmlFor="email">Email
@@ -51,7 +51,7 @@ export default function Contact(){
                         </label>
                         
                         <label htmlFor="subject">Subject
-                            <input type="text" id="subject" name="subject" defaultValue="bananas"/>
+                            <input type="text" id="subject" name="subject" defaultValue="Bananas"/>
                         </label>
 
                         <label htmlFor="message">Message

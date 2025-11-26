@@ -1,6 +1,6 @@
 import NavLinks from "../navlinks/NavLinks.jsx"
 import Menu from "../menu/Menu.jsx"
-import logo from "../../assets/logo.png"
+import assets from "../../assets.json"
 import './navbar.css'
 import {Link} from 'react-router'
 
@@ -52,7 +52,7 @@ export default function Navbar(){
         <nav>
             <div className="nav-content site-lr-padding content-max-width">
                 <Link className="logo-link" to="/">
-                    <img className="logo-img" src={logo} alt="drd's dragon logo" />
+                    <img className="logo-img" src={assets["Logo"].img} alt={assets["Logo"].alt} />
                 </Link>
                 <NavLinks addJoin={true}/>
                 

@@ -1,17 +1,17 @@
 import NavLinks from "../navlinks/NavLinks.jsx"
-import logo from "../../assets/logo.png"
-import './linksection.css'
 
-import icons from "./social-icons.js"
+import assets from "../../assets.json"
+
+import './linksection.css'
 
 import { Link } from "react-router"
 
 export default function LinkSection() {
 
-    const iconImages = icons.map((item, index) => {
+    const iconImages = assets["Social"].map((item, index) => {
         return (
             <a key={index} target="_blank" className="icon-link" href={item.link}>
-                <img src={item.img}/>
+                <img src={item.img} alt={item.alt}/>
             </a>
         )
     });
@@ -21,7 +21,7 @@ export default function LinkSection() {
             <div className="footer-content content-max-width site-lr-padding">
                 <div className="logo-and-join-container">
                     <div className="link-section-text">
-                        <img src={logo} alt="" />
+                        <img src={assets["Logo"].img} alt={assets["Logo"].alt} />
                         <p className="body-text-two-font link-section-team-name">Davis Racing Dragons</p>
                         <h3 className="body-text-one-font link-section-title">Dragonboat at UC Davis</h3>
                     </div>
