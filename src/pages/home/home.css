@@ -152,7 +152,7 @@ div.header-text-container {
 }
 
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1400px){
     .what-is-db-section > h2{
         display: block;
     }
@@ -228,13 +228,17 @@ div.header-text-container {
     color: rgba(2, 48, 62, 1);
 }
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1400px){
     .our-story-section > h2{
         display: block;
     }
     
     .our-story-content{
         justify-content: center;
+    }
+
+    .our-story-content > img{
+        margin: 0 60px;
     }
 
     .our-story-text{

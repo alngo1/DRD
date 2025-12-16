@@ -67,7 +67,7 @@ export default function About(props){
         return (
             <figure key={index} className="card-content">
                 {/* <img className="board-img" src={obj.img} alt="" /> */}
-                <img className="board-img" src={assets["About"]["Board Default"]} alt={`Photo of ${obj.name}`} />
+                <img className="board-img" src={assets["About"]["Board Default"].img} alt={`Photo of ${obj.name}`} />
                 <figcaption className="card-text">
                     <h2 className="body-text-one-font board-name-text">{obj.name}</h2>
                     <p className="body-text-two-font board-role-text">{obj.role}</p>
