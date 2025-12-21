@@ -17,6 +17,19 @@
     <link rel="stylesheet" href="./src/index.css">
   </head>
   <body>
+
+    <form name="contact" hidden netlify netlify-honeypot="bot-field">
+          <input type="text" id="firstName" name="firstName" defaultValue="Joe"/>
+
+          <input type="text" id="lastName" name="lastName" defaultValue="Schmoe"/>
+      
+          <input type="text" id="email" name="email" defaultValue="joe@schmoe.com"/>
+      
+          <input type="text" id="subject" name="subject" defaultValue="Bananas"/>
+
+          <textarea id="message" name="message" defaultValue="AHH"></textarea>
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

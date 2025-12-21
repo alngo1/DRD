@@ -35,7 +35,8 @@ export default function Contact(){
                 // visual={<img src={eventImg} className="" alt="" />}
                 buttons={<button className="secondary-button event-button">View Full Calendar</button>}
                 visual={
-                    <form className="contact-form" action={signUp}>
+                    <form name="contact" className="contact-form" action={signUp}>
+                        <input type="hidden" name="form-name" value="contact"/>
                         <label htmlFor="firstName">
                             First Name
                             <input type="text" id="firstName" name="firstName" defaultValue="Joe"/>
