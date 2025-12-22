@@ -6,24 +6,24 @@ import axios from 'axios'
 
 export default function Contact(){
 
-    async function signUp(formData) {
-        const data = Object.fromEntries(formData)
-        //.getAll is similar to .get but for multiple elements like with checkboxes
-        const allData = {
-            ...data,
-        }
-        try {
-            const response = await axios.post("https://dn5vq5i4b1.execute-api.us-west-1.amazonaws.com/Prod", allData);
-        } catch (caught){
-            if (!caught.response) {
-                // Network error occurred
-                console.error('Network error:', caught);
-            } else {
-                // The server responded with a status other than 200 range
-                console.error('Error response:', caught.response);
-            }
-        }
-    }
+    // async function signUp(formData) {
+    //     const data = Object.fromEntries(formData)
+    //     //.getAll is similar to .get but for multiple elements like with checkboxes
+    //     const allData = {
+    //         ...data,
+    //     }
+    //     try {
+    //         const response = await axios.post("https://dn5vq5i4b1.execute-api.us-west-1.amazonaws.com/Prod", allData);
+    //     } catch (caught){
+    //         if (!caught.response) {
+    //             // Network error occurred
+    //             console.error('Network error:', caught);
+    //         } else {
+    //             // The server responded with a status other than 200 range
+    //             console.error('Error response:', caught.response);
+    //         }
+    //     }
+    // }
 
     return (
         <>
@@ -35,7 +35,7 @@ export default function Contact(){
                 // visual={<img src={eventImg} className="" alt="" />}
                 buttons={<button className="secondary-button event-button">View Full Calendar</button>}
                 visual={
-                    <form name="contact" className="contact-form" action={signUp}>
+                    <form name="contact" className="contact-form" method="post" /*action={signUp}*/>
                         <input type="hidden" name="form-name" value="contact"/>
                         <label htmlFor="firstName">
                             First Name
