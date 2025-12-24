@@ -37,6 +37,9 @@ export default function Contact(){
                 visual={
                     <form name="contact" className="contact-form" method="post" /*action={signUp}*/>
                         <input type="hidden" name="form-name" value="contact"/>
+
+                        <input name="bot-field" type="text" className="hidden-bot-field"/>
+
                         <label htmlFor="firstName">
                             First Name
                             <input type="text" id="firstName" name="firstName" defaultValue="Joe"/>
@@ -58,6 +61,8 @@ export default function Contact(){
                         <label htmlFor="message">Message
                             <textarea id="message" name="message" defaultValue="AHH"></textarea>
                         </label>
+
+                        <div className="captcha" data-netlify-recaptcha="true"></div>
 
                         <button className="submit-button secondary-button">Submit</button>
                     </form>
