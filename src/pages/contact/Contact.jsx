@@ -3,8 +3,21 @@ import LinkSection from "../../components/link-section/LinkSection.jsx"
 import Navbar from "../../components/navbar/Navbar.jsx"
 import HeaderSection from "../../components/header-section/HeaderSection.jsx"
 import axios from 'axios'
+import ReCAPTCHA from 'react-google-recaptcha'
+import React from 'react'
 
 export default function Contact(){
+
+    const refReCAPTCHA = React.createRef();
+    const [refreshCAPTCHA, setRefreshCAPTCHA] = React.useState(false);
+
+    function resetCAPTCHA(){
+        if(refReCAPTCHA.current == null){
+            return;
+        }
+        refReCAPTCHA.current.reset();
+        setRefreshCAPTCHA(!refreshCAPTCHA);
+    }
 
     // async function signUp(formData) {
     //     const data = Object.fromEntries(formData)
@@ -28,13 +41,13 @@ export default function Contact(){
     return (
         <>
             <Navbar/>
-            <HeaderSection
-                heading="Contact Us"
-                headingStyle="heading-font"
-                paragraph="Have a question? Send us a message here, or through one of the following forms of contact below!"
-                // visual={<img src={eventImg} className="" alt="" />}
-                buttons={<button className="secondary-button event-button">View Full Calendar</button>}
-                visual={
+            <section className="header-section section-tb-padding site-lr-padding content-max-width">
+                <h1 className="heading-font">Contact Us</h1>
+                <div className="header-content">
+                    <div className="header-section-text-container">
+                        <h1 className="heading-font">Contact Us</h1>
+                        <p className="body-text-two-font">Have a question? Send us a message here, or through one of the following forms of contact below!</p>
+                    </div>
                     <form name="contact" className="contact-form" method="POST" /*action={signUp}*/>
                         <input type="hidden" name="form-name" value="contact"/>
 
@@ -62,16 +75,16 @@ export default function Contact(){
                             <textarea id="message" name="message" defaultValue="AHH"></textarea>
                         </label>
 
-                        <div class="g-recaptcha" data-sitekey="6LfQZzUsAAAAAHvNh_fQ-JifG2A7_EwKgbphwIe2" data-action="send-email"></div>
-
-                        {/* <p className="captcha">
-                            <div data-netlify-recaptcha="true"></div>
-                        </p> */}
-
-                        <button className="submit-button secondary-button">Submit</button>
+                        <ReCAPTCHA
+                            ref={refReCAPTCHA}
+                            className="g-recaptcha"
+                            sitekey="6LfQZzUsAAAAAHvNh_fQ-JifG2A7_EwKgbphwIe2"
+                            data-action="send-email"
+                        />
+                        <button type="submit" onClick={() => {refReCAPTCHA.current.execute();}} className="submit-button secondary-button">Submit</button>
                     </form>
-                }
-            />
+                </div>
+            </section>
             <LinkSection/>
         </>
     )
