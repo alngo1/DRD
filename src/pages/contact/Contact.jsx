@@ -35,7 +35,7 @@ export default function Contact(){
                 // visual={<img src={eventImg} className="" alt="" />}
                 buttons={<button className="secondary-button event-button">View Full Calendar</button>}
                 visual={
-                    <form name="contact" className="contact-form" method="POST" onSubmit="submit" /*action={signUp}*/>
+                    <form name="contact" className="contact-form" method="POST" /*action={signUp}*/>
                         <input type="hidden" name="form-name" value="contact"/>
 
                         <input name="bot-field" type="text" className="hidden-bot-field"/>
@@ -62,11 +62,13 @@ export default function Contact(){
                             <textarea id="message" name="message" defaultValue="AHH"></textarea>
                         </label>
 
-                        <p className="captcha">
-                            <div data-netlify-recaptcha="true"></div>
-                        </p>
+                        <div class="g-recaptcha" data-sitekey="6LfQZzUsAAAAAHvNh_fQ-JifG2A7_EwKgbphwIe2" data-action="send-email"></div>
 
-                        <button type="submit" className="submit-button secondary-button">Submit</button>
+                        {/* <p className="captcha">
+                            <div data-netlify-recaptcha="true"></div>
+                        </p> */}
+
+                        <button className="submit-button secondary-button">Submit</button>
                     </form>
                 }
             />

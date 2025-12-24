@@ -15,9 +15,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
     <!-- Styles -->
     <link rel="stylesheet" href="./src/index.css">
+
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
   </head>
   <body>
-    <form name="contact" hidden netlify netlify-honeypot="bot-field">
+    <form name="contact" hidden netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true">
       <!-- data-netlify-recaptcha="true" -->
       
       <input name="bot-field" type="text"/>
