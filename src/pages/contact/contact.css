@@ -36,6 +36,8 @@ form.contact-form{
 }
 
 .captcha{
+    max-width: 100%;
+    max-height: 100%;
     grid-area: 5 / 1 / 6 / 3;
     justify-self: center;
 }
