@@ -107,6 +107,10 @@
 
 .join-button-color{
     background-color: rgba(241, 176, 32, 1);
+
+    &:hover{
+        background-color: #E29B00;
+    }
 }
 
 @media only screen and (max-width: 1400px){
@@ -216,8 +220,10 @@
 }
 
 .see-all-videos-container > a{
-    border: none;
     background-color: rgba(241, 176, 32, 1);
+    &:hover{
+        background-color: #E29B00;
+    }
 }
 
 @media only screen and (max-width: 1400px){

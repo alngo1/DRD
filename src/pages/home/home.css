@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .home-header > nav{
@@ -93,7 +93,6 @@ div.header-text-container {
     div.header-text-container{
         align-items: center;
         text-align: center;
-        color: #02303E;
     }
     
     .header-text-container > a > span{
@@ -226,6 +225,10 @@ div.header-text-container {
     border-radius: 40px;
     background-color: rgba(241, 176, 32, 1);
     color: rgba(2, 48, 62, 1);
+
+    &:hover{
+        background-color: #E29B00;
+    }
 }
 
 @media only screen and (max-width: 1400px){
@@ -298,6 +301,10 @@ div.header-text-container {
 
 .learn-more-button {
     background-color: rgba(241, 176, 32, 1);
+
+    &:hover{
+        background-color: #E29B00;
+    }
 }
 
 

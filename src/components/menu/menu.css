@@ -25,12 +25,22 @@
     color: #F4F9FA;
     display: block;
     transition: all 0.2s ease;
+
+    &.active{
+        text-decoration: underline 1.5px rgba(244, 249, 250, 1);
+        text-underline-offset: 2px;
+    }
 }
 
 .menu-links > li:nth-child(5) > a{
     text-decoration: none;
     display: block;
     transition: all 0.2s ease;
+
+    &.active{
+        text-decoration: underline 1.5px rgba(2, 48, 62, 1);
+        text-underline-offset: 2px;
+    }
 }
 
 .menu-links > li > a:hover {

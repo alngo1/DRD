@@ -19,7 +19,6 @@ export default function Navbar(){
 
         window.addEventListener("resize", changeWindowWidth);
         return function(){
-            console.log("clean up func")
             window.removeEventListener("resize", changeWindowWidth);
         }
     }, []);

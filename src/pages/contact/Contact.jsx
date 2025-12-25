@@ -53,24 +53,24 @@ export default function Contact(){
 
                         <label htmlFor="firstName">
                             First Name
-                            <input type="text" id="firstName" name="firstName" defaultValue="Joe"/>
+                            <input type="text" id="firstName" name="firstName" defaultValue="Joe" required/>
                         </label>
 
                         <label htmlFor="lastName">
                             Last Name
-                            <input type="text" id="lastName" name="lastName" defaultValue="Schmoe"/>
+                            <input type="text" id="lastName" name="lastName" defaultValue="Schmoe" required/>
                         </label>
                         
                         <label htmlFor="email">Email
-                            <input type="text" id="email" name="email" defaultValue="joe@schmoe.com"/>
+                            <input type="text" id="email" name="email" defaultValue="joe@schmoe.com" required/>
                         </label>
                         
                         <label htmlFor="subject">Subject
-                            <input type="text" id="subject" name="subject" defaultValue="Bananas"/>
+                            <input type="text" id="subject" name="subject" defaultValue="Bananas" required/>
                         </label>
 
                         <label htmlFor="message">Message
-                            <textarea id="message" name="message" defaultValue="AHH"></textarea>
+                            <textarea id="message" name="message" defaultValue="AHH" required></textarea>
                         </label>
 
                         <ReCAPTCHA

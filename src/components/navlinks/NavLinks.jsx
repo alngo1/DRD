@@ -21,7 +21,11 @@ export default function NavLinks(props){
               <NavLink to="/contacts" onClick={()=>{window.scrollTo(0,0)}}>Contact</NavLink>
             </li>
             {props.addJoin && <li>
-              <NavLink className="secondary-button join-button" to="/join" onClick={()=>{window.scrollTo(0,0)}}>Join</NavLink>
+              <NavLink className="secondary-button join-button" to="/join" onClick={()=>{window.scrollTo(0,0)}}>
+                <p className="join-button-text">
+                  Join
+                </p>
+              </NavLink>
             </li>}
         </ul>
     )

@@ -23,7 +23,6 @@ export default function Slideshow(props){
 
         window.addEventListener("resize", changeWindowWidth);
         return function(){
-            console.log("clean up func")
             window.removeEventListener("resize", changeWindowWidth);
         }
     }, [])

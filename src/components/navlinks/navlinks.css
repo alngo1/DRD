@@ -10,20 +10,34 @@
 }
 
 .nav-link-container>li>a {
-  text-decoration: none;
+  text-decoration: underline 1.5px rgba(244, 249, 250, 0);
+  text-underline-offset: 2px;
   color: #F4F9FA;
   font-size: 1.2rem;
-  transition: color 0.2s ease;
-}
+  transition: text-decoration-color 300ms ease;
 
-.nav-link-container>li>a:hover {
-  color: #02303E;
+  &.active, &:hover{
+    text-decoration-color: rgba(244, 249, 250, 1);
+  }
+
 }
 
 .nav-link-container>li>a.join-button {
+  text-decoration: underline 1.5px rgba(2, 48, 62, 0);
   color: #02303E;
-}
 
-.nav-link-container>li>a.join-button:hover {
-  color: #F4F9FA;
+  &:hover{
+    text-decoration-color: none;
+  }
+
+  & > p{
+    display: inline;
+    text-decoration: underline 1.5px rgba(2, 48, 62, 0);
+    text-underline-offset: 2px;
+    transition: text-decoration-color 300ms ease;
+  }
+
+  &:hover > p, &.active{
+    text-decoration-color: rgba(2, 48, 62, 1);
+  }
 }

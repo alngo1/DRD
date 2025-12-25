@@ -103,6 +103,8 @@ div#root{
   color: #02303E;
   padding: 10px 20px;
   border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
 
   /* body text 1 */
   font-family: "Lexend", sans-serif;
@@ -110,6 +112,10 @@ div#root{
   font-size: 32px;
   text-decoration: none;
   margin: 0;
+
+  &:hover{
+    background-color: #82BCC7;
+  }
 }
 
 .secondary-button{
@@ -118,6 +124,9 @@ div#root{
   background-color: #85CFDD;
   color: #02303E;
   padding: 10px 20px;
+  transition: background-color 0.2s ease-in;
+  cursor: pointer;
+
 
   /* body text 2 */
   font-family: "Lexend", sans-serif;
@@ -125,6 +134,10 @@ div#root{
   font-size: 24px;
   text-decoration: none;
   margin: 0;
+
+  &:hover{
+    background-color: #82BCC7;
+  }
 }
 
 
