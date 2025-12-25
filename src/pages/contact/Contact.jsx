@@ -8,15 +8,13 @@ import React from 'react'
 
 export default function Contact(){
 
-    const refReCAPTCHA = React.createRef();
-    const [refreshCAPTCHA, setRefreshCAPTCHA] = React.useState(false);
+    const refReCAPTCHA = React.useRef(null);
 
-    function resetCAPTCHA(){
-        if(refReCAPTCHA.current == null){
-            return;
+    function handleCAPTCHA(){
+        let val = refReCAPTCHA.current.getValue();
+        if(!val){
+            alert("Please complete the reCAPTCHA before submitting the form.");
         }
-        refReCAPTCHA.current.reset();
-        setRefreshCAPTCHA(!refreshCAPTCHA);
     }
 
     // async function signUp(formData) {
@@ -81,8 +79,9 @@ export default function Contact(){
                             sitekey="6LfQZzUsAAAAAHvNh_fQ-JifG2A7_EwKgbphwIe2"
                             data-action="send-email"
                         />
-                        <button type="submit" onClick={() => {refReCAPTCHA.current.execute();}} className="submit-button secondary-button">Submit</button>
+                        <button type="submit" onClick={handleCAPTCHA} className="submit-button secondary-button">Submit</button>
                     </form>
+
                 </div>
             </section>
             <LinkSection/>
