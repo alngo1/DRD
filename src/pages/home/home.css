@@ -258,6 +258,63 @@ div.header-text-container {
 
 }
 
+/* No Experience Section */
+.no-experience-section{
+    width: 100%;
+    background-color: #007992;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.no-experience-text-wrapper{
+    max-width: 100%;
+
+    & > .sub-heading-font, & > .body-text-one-font{
+        color: white;
+    }
+
+}
+
+.no-experience-button-wrapper{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+
+    & > .primary-button{
+        width: 230px;
+        text-align: center;
+        background-color: #F1B020;
+
+        &:hover{
+            background-color: #E29B00;
+        }
+    }
+}
+
+.no-experience-socials{
+    transition: opacity 0.2s ease;
+    display: flex;
+    align-items: center;
+
+    & > img{
+        width: 75%;
+    }
+    
+    &:hover{
+        opacity: 75%;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .no-experience-section{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
 /* What We Do Section */
 .what-we-do-section {
     width: 100%;

@@ -46,58 +46,58 @@
         },
         "Board" : [
             {
-                "img": "./assets/about/board_photos/1.jpg",
+                "img": "./assets/about/board_photos/lily.jpg",
                 "name": "Lily Wen",
                 "role": "President"
             },
             
             {
-                "img": "./assets/about/board_photos/2.jpg",
+                "img": "./assets/about/board_photos/allison.jpg",
                 "name": "Allison Mar",
                 "role": "Vice President"
             },
             {
-                "img": "./assets/about/board_photos/3.jpg",
+                "img": "./assets/about/board_photos/reagan.jpg",
                 "name": "Reagan Ochalek",
                 "role": "Head Coach"
             },
             {
-                "img": "./assets/about/board_photos/4.jpg",
+                "img": "./assets/about/board_photos/mckayla.jpg",
                 "name": "Mckayla Ma",
                 "role": "Coach"
             },
             {
-                "img": "./assets/about/board_photos/5.jpg",
+                "img": "./assets/about/board_photos/justin.jpg",
                 "name": "Justin Thang",
                 "role": "Coach"
             },
             {
-                "img": "./assets/about/board_photos/6.jpg",
+                "img": "./assets/about/board_photos/braden.jpg",
                 "name": "Braden Lee",
                 "role": "Director of Internal Affairs"
             },
             {
-                "img": "./assets/about/board_photos/7.jpg",
+                "img": "./assets/about/board_photos/marianne.jpg",
                 "name": "Marianne Lee-Dodson",
                 "role": "Treasurer"
             },
             {
-                "img": "./assets/about/board_photos/8.jpg",
+                "img": "./assets/about/board_photos/sean.jpg",
                 "name": "Sean Elmore",
                 "role": "Fundraising Chair"
             },
             {
-                "img": "./assets/about/board_photos/9.jpg",
+                "img": "./assets/about/board_photos/danh.jpg",
                 "name": "Danh Nguyen",
                 "role": "Events Coordinator"
             },
             {
-                "img": "./assets/about/board_photos/9.jpg",
+                "img": "./assets/about/board_photos/katherine.jpg",
                 "name": "Katherine Vo",
                 "role": "Director of Marketing"
             },
             {
-                "img": "./assets/about/board_photos/9.jpg",
+                "img": "./assets/about/board_photos/alis.jpg",
                 "name": "Alice Ngo",
                 "role": "Historian"
             }

@@ -29,6 +29,16 @@ export default function Home(props){
     whatIsDBRef.current.scrollIntoView({behavior: "smooth"});
   }
 
+  const iconImages = assets["Social"].map((item, index) => {
+      if(index % 2 != 0){
+        return (
+            <a key={index} target="_blank" className="no-experience-socials" href={item.link}>
+                <img src={item.img} alt={item.alt}/>
+            </a>
+        )
+      }
+  }).reverse();
+
   return (
     <>
       <header className="home-header">
@@ -74,12 +84,22 @@ export default function Home(props){
               </div>
             </div>
           </section>
+          <section className="no-experience-section section-tb-padding site-lr-padding">
+            <div className="no-experience-text-wrapper">
+              <h2 className="sub-heading-font">No experience? No problem!</h2>
+              <p className="body-text-one-font">Davis Racing Dragons is open to everyone!</p>
+            </div>
+            <div className="no-experience-button-wrapper">
+              {iconImages}
+              <Link to="/join" onClick={() => {window.scroll(0,0)}} className="primary-button">Join</Link>
+            </div>
+          </section>
           <section className="what-we-do-section section-tb-padding">
             <h2 className="sub-heading-font">What We Do</h2>
             <div className="card-container content-max-width site-lr-padding">
               {cardBlocks}
             </div>
-            <Link className="primary-button learn-more-button" to="/about">Learn More</Link>
+            <Link className="primary-button learn-more-button" onClick={() => {window.scroll(0,0)}} to="/events">Learn More</Link>
           </section>
         </article>
       </main>
