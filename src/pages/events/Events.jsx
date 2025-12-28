@@ -14,7 +14,7 @@ import clsx from "clsx"
 
 export default function Events(props){
 
-    const textQuestionClass = clsx(props.isMobile ? "body-text-one-font" : "sub-heading-font" )
+    const textQuestionClass = clsx(props.isMobile ? "body-text-one-font" : "sub-heading-font", "practices-headers")
 
     return (
         <>
@@ -71,7 +71,7 @@ export default function Events(props){
                                         <h2 className={textQuestionClass}>How</h2>
                                         <div className="practice-info">
                                             <p className="body-text-two-font">Carpool and equipment provided!</p>
-                                            <p className="body-text-two-font">See our FAQ page for more info on what to bring to practices!</p>
+                                            <p className="body-text-two-font see-faq-text">See our FAQ page for more info on what to bring to practices!</p>
                                         </div>
                                     </div>
                                     <Link to="/about/#faq-section" className="secondary-button">What to bring</Link>

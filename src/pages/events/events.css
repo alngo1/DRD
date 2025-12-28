@@ -59,8 +59,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
-    gap: 32px;
+    justify-content: space-between;
+    /* gap: 32px; */
 
     padding: 64px 72px;
     border-radius: 0 10px 10px 0;
@@ -75,8 +75,10 @@
     gap: 32px;
 }
 
-.practice-card-text > h2{
+.practices-headers{
     color: rgba(244, 249, 250, 1);
+    line-height: 0.8;
+    padding-top: 20px;
 }
 
 .practice-info{
@@ -84,6 +86,10 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+}
+
+.see-faq-text{
+    line-height: 25px;
 }
 
 .practice-card-text > ul{
@@ -115,11 +121,17 @@
 
 @media only screen and (max-width: 1400px){
     .text-button-container{
+        padding: 28px 32px;
+        justify-content: space-around;
         gap: 0;
     }
     .practice-card-text{
         justify-content: center;
         gap: 0;
+    }
+    .practices-headers{
+        line-height: normal;
+        padding-top: 0;
     }
     .practice-info{
         line-height: 35px;
@@ -129,7 +141,6 @@
 @media only screen and (max-width: 1200px){
     .text-button-container{
         padding: 28px 32px;
-        justify-content: center;
     }
     .practice-info{
         line-height: 25px;
@@ -155,8 +166,11 @@
     }
     
     .practice-card-text{
-        max-width: 300px;
         gap: 8px;
+    }
+
+    .practices-headers{
+        font-weight: bolder;
     }
 
     .join-team-container{
@@ -199,23 +213,23 @@
 .races-media{
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: start;
-    gap: 60px
+    gap: 60px;
 }
 
 .see-all-videos-container{
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     gap: 20px;
 }
 
 .see-all-videos-container > video{
     width: 100%;
-    max-width: 500px;
-    height: 334px;
+    /* max-width: 500px; */
+    height: 100%;
+    max-height: 334px;
     border-radius: 10px;
 }
 
@@ -230,8 +244,15 @@
     .races-media{
         justify-content: center;        
     }
-    .see-all-videos-container > video{
-        height: auto;
+}
+
+@media only screen and (max-width: 900px){
+    .races-media{
+        flex-wrap: wrap;
+    }
+
+    .see-all-videos-container{
+        width: 100%;
     }
 }
 
