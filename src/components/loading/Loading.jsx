@@ -7,6 +7,13 @@ export default function Loading(props){
 
     let loadingClasses = clsx("loading-screen", !props.enabled && "loading-fade");
     
+    //when loading screen is shown stop scroll on body
+    let body = document.getElementsByTagName("body")[0];
+    if(props.enabled){
+        body.style.overflow = "hidden";
+    } else {
+        body.style.overflow = "auto";
+    }
 
     return (
         <>
