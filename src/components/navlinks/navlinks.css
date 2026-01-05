@@ -14,7 +14,7 @@
   text-underline-offset: 2px;
   color: #F4F9FA;
   font-size: 1.2rem;
-  transition: text-decoration-color 300ms ease;
+  transition: text-decoration-color 0.14s ease-out;
 
   &.active, &:hover{
     text-decoration-color: rgba(244, 249, 250, 1);
@@ -34,7 +34,7 @@
     display: inline;
     text-decoration: underline 1.5px rgba(2, 48, 62, 0);
     text-underline-offset: 2px;
-    transition: text-decoration-color 300ms ease;
+    transition: text-decoration-color 0.14s ease-out;
   }
 
   &:hover > p, &.active{

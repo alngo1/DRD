@@ -104,7 +104,7 @@ div#root{
   padding: 10px 20px;
   border-radius: 40px;
   cursor: pointer;
-  transition: background-color 0.2s ease-in;
+  transition: background-color 0.1s ease;
 
   /* body text 1 */
   font-family: "Lexend", sans-serif;
@@ -124,7 +124,7 @@ div#root{
   background-color: #85CFDD;
   color: #02303E;
   padding: 10px 20px;
-  transition: background-color 0.2s ease-in;
+  transition: background-color 0.1s ease;
   cursor: pointer;
 
 

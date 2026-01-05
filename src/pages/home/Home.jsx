@@ -4,15 +4,21 @@ import assets from "../../assets.json"
 import Carosel from "../../components/carosel/Carosel.jsx"
 import LinkSection from "../../components/link-section/LinkSection.jsx"
 import Navbar from "../../components/navbar/Navbar.jsx"
+import Loading from "../../components/loading/Loading.jsx"
 // css
 import './home.css'
 // react router
 import { Link } from 'react-router'
-
+//react youtube
+import Youtube from "react-youtube"
+//react
+import React from "react"
 
 import { useRef, useEffect } from "react"
 
 export default function Home(props){
+
+  const [enableLoading, setEnableLoading] = React.useState(true);
   
   const cardBlocks = assets["Home"]["what-we-do-cards"].map((card, index) => {
     return (
@@ -39,8 +45,43 @@ export default function Home(props){
       }
   }).reverse();
 
+
+  //function to be called when react youtube api loads
+  function onPlayerReady(event){
+    const player = event.target;
+    player.pauseVideo();
+    player.mute();
+    player.setSize("100%", "100%");
+    player.playVideo();
+  }
+  
+  function onPlayerPlay(event){
+    if(enableLoading == false){
+      return;
+    }
+    setEnableLoading(false);
+  }
+
+  const options = {
+    height: "100%",
+    width: "100%",
+    playerVars: {
+      enablejsapi: 1,
+      autoplay: 1,
+      controls: 0,
+      disablekb: 1,
+      fs: 0,
+      loop: 1,
+      playlist: "sx9AilbuRcE",
+      rel: 0
+    },
+  };
+
   return (
     <>
+      <Loading 
+        enabled={enableLoading}
+      />
       <header className="home-header">
         <Navbar/>
         <div className="header-text-container content-max-width site-lr-padding">
@@ -56,10 +97,21 @@ export default function Home(props){
           </div>
         </div>
       </header>
-      <video autoPlay muted loop playsInline poster={assets["Home"]["video-poster-img"]} className="home-video">
-        <source src={assets["Home"]["main-video"]} type="video/mp4" />
-          Your browser does not support the video/mp4 tag.
-      </video>
+
+      <div className="home-video-wrapper">
+        <Youtube
+          videoId="sx9AilbuRcE"
+          className="home-video"
+          opts={options}
+          onReady={onPlayerReady}
+          // onStateChange={onPlayerStateChange}
+          onPlay={onPlayerPlay}
+        />
+      </div>
+
+      {/* <div className="home-video-wrapper">
+        <iframe className="home-video" src="https://www.youtube.com/embed/sx9AilbuRcE?si=5m4Ll5AC25GUzcPJ&amp;controls=0&mute=1&autoplay=1&loop=1&playlist=sx9AilbuRcE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div> */}
       <main>
         <article>
           <section ref={whatIsDBRef} className="what-is-db-section section-tb-padding">

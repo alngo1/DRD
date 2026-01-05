@@ -91,9 +91,10 @@ export default function Events(props){
                         <div className="races-media content-max-width site-lr-padding">
                             <Carosel slides={assets["Events"]["Race Slides"]}/>
                             <div className="see-all-videos-container">
-                                <video controls autoPlay muted alt="">
+                                {/* <video controls autoPlay muted alt="">
                                     <source src={assets["Events"]["Race Video"]} />
-                                </video>
+                                </video> */}
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/eHmVLr-cW70?si=vUkSOyG6j8YKgAsV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 <a href="https://www.youtube.com/@davisracingdragons7829" target="_blank" className="secondary-button">See All Videos</a>
                             </div>
                         </div>
