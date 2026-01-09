@@ -53,6 +53,10 @@ export default function Home(props){
     player.mute();
     player.setSize("100%", "100%");
     player.playVideo();
+    if(enableLoading == false){
+      return;
+    }
+    setEnableLoading(false);
   }
   
   function onPlayerPlay(event){
@@ -105,7 +109,7 @@ export default function Home(props){
           opts={options}
           onReady={onPlayerReady}
           // onStateChange={onPlayerStateChange}
-          onPlay={onPlayerPlay}
+          // onPlay={onPlayerPlay}
         />
       </div>
 
