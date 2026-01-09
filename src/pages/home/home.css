@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.6);
+    pointer-events: none;
 }
 
 .home-header > nav{
@@ -68,6 +69,7 @@ div.header-text-container {
     width: 100vw;
     height: 100vh;
     z-index: -1;
+    pointer-events: none;
 }
 
 :root {
