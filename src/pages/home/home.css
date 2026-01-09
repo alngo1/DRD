@@ -7,7 +7,6 @@
     align-items: center;
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.6);
-    pointer-events: none;
 }
 
 .home-header > nav{
