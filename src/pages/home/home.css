@@ -12,6 +12,7 @@
 
 .home-header > nav{
     background: none;
+    pointer-events: auto;
 }
 
 div.header-text-container {
@@ -25,6 +26,7 @@ div.header-text-container {
 
 .header-text-container > a {
     margin: 10px 0;
+    pointer-events: auto;
 }
 
 .header-text-container > a > span{
@@ -35,6 +37,7 @@ div.header-text-container {
     width: 100%;
     display: flex;
     justify-content: center;
+    pointer-events: auto;
 }
 
 .arrow-down {
