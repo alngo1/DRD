@@ -19,6 +19,7 @@ import { useRef, useEffect } from "react"
 export default function Home(props){
 
   const [enableLoading, setEnableLoading] = React.useState(true);
+  const [videoAutoplayBlocked, setVideoAutoplayBlocked] = React.useState(false);
   
   const cardBlocks = assets["Home"]["what-we-do-cards"].map((card, index) => {
     return (
@@ -58,8 +59,9 @@ export default function Home(props){
     }
     setEnableLoading(false);
   }
-  
-  function onPlayerPlay(event){
+
+  function onPlayerAutoplayBlocked(event){
+    setVideoAutoplayBlocked(true);
     if(enableLoading == false){
       return;
     }
@@ -77,15 +79,14 @@ export default function Home(props){
       fs: 0,
       loop: 1,
       playlist: "sx9AilbuRcE",
-      rel: 0
+      rel: 0,
+      playsinline: 1
     },
   };
 
   return (
     <>
-      <Loading 
-        enabled={enableLoading}
-      />
+      {!videoAutoplayBlocked && <Loading enabled={enableLoading}/>}
       <header className="home-header">
         <Navbar/>
         <div className="header-text-container content-max-width site-lr-padding">
@@ -102,20 +103,22 @@ export default function Home(props){
         </div>
       </header>
 
-      <div className="home-video-wrapper">
-        <Youtube
-          videoId="sx9AilbuRcE"
-          className="home-video"
-          opts={options}
-          onReady={onPlayerReady}
-          // onStateChange={onPlayerStateChange}
-          // onPlay={onPlayerPlay}
-        />
-      </div>
+      {
+        videoAutoplayBlocked ? 
+        <img src={assets["Home"]["video-poster-img"]} className="home-video-placeholder"/>
+        
+        :
 
-      {/* <div className="home-video-wrapper">
-        <iframe className="home-video" src="https://www.youtube.com/embed/sx9AilbuRcE?si=5m4Ll5AC25GUzcPJ&amp;controls=0&mute=1&autoplay=1&loop=1&playlist=sx9AilbuRcE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-      </div> */}
+        <div className="home-video-wrapper">
+            <Youtube
+              videoId="sx9AilbuRcE"
+              className="home-video"
+              opts={options}
+              onReady={onPlayerReady}
+              onAutoplayBlocked={onPlayerAutoplayBlocked}
+            />
+        </div>
+      }
       <main>
         <article>
           <section ref={whatIsDBRef} className="what-is-db-section section-tb-padding">

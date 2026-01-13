@@ -90,7 +90,6 @@ div.header-text-container {
   }
 }
 
-
 .home-video{
     position: absolute;
     top: 50%;
@@ -98,6 +97,14 @@ div.header-text-container {
     width: var(--video-width);
     height: var(--video-height);
     transform: translate(-50%, -50%) scale(1.2345);
+    z-index: -1;
+}
+
+.home-video-placeholder{
+    position: fixed;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
     z-index: -1;
 }
 
@@ -293,6 +300,7 @@ div.header-text-container {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .no-experience-text-wrapper{
@@ -334,12 +342,23 @@ div.header-text-container {
     }
 }
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1320px){
     .no-experience-section{
         flex-direction: column;
         align-items: center;
-        gap: 20px;
     }
+
+    .no-experience-text-wrapper{
+        text-align: center;
+    }
+    
+}
+
+@media only screen and (max-width: 900px){
+    .no-experience-text-wrapper{
+        text-align:start;
+    }
+    
 }
 
 /* What We Do Section */
