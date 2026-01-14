@@ -19,7 +19,7 @@ import { useRef, useEffect } from "react"
 export default function Home(props){
 
   const [enableLoading, setEnableLoading] = React.useState(true);
-  const [videoAutoplayBlocked, setVideoAutoplayBlocked] = React.useState(false);
+  const [videoPlaying, setVideoPlaying] = React.useState(false);
   
   const cardBlocks = assets["Home"]["what-we-do-cards"].map((card, index) => {
     return (
@@ -60,12 +60,26 @@ export default function Home(props){
     setEnableLoading(false);
   }
 
-  function onPlayerAutoplayBlocked(event){
-    setVideoAutoplayBlocked(true);
-    if(enableLoading == false){
-      return;
+  function onPlayerPlay(event){
+    setVideoPlaying(true);
+  }
+
+  function onPlayerStateChange(event){
+    const player = event.target;
+    let currState = player.getPlayerState();
+    switch(currState){
+      case Youtube.PlayerState.UNSTARTED:
+        setVideoPlaying(false);
+      case Youtube.PlayerState.CUED:
+        setVideoPlaying(false);
+      default:
+        return
     }
-    setEnableLoading(false);
+  }
+
+  function playVideoIOS(){
+    setVideoAutoplayBlocked(false);
+
   }
 
   const options = {
@@ -74,7 +88,7 @@ export default function Home(props){
     playerVars: {
       enablejsapi: 1,
       autoplay: 1,
-      controls: 0,
+      controls: 1,
       disablekb: 1,
       fs: 0,
       loop: 1,
@@ -86,7 +100,7 @@ export default function Home(props){
 
   return (
     <>
-      {!videoAutoplayBlocked && <Loading enabled={enableLoading}/>}
+      <Loading enabled={enableLoading}/>
       <header className="home-header">
         <Navbar/>
         <div className="header-text-container content-max-width site-lr-padding">
@@ -103,22 +117,17 @@ export default function Home(props){
         </div>
       </header>
 
-      {
-        videoAutoplayBlocked ? 
-        <img src={assets["Home"]["video-poster-img"]} className="home-video-placeholder"/>
-        
-        :
-
-        <div className="home-video-wrapper">
-            <Youtube
-              videoId="sx9AilbuRcE"
-              className="home-video"
-              opts={options}
-              onReady={onPlayerReady}
-              onAutoplayBlocked={onPlayerAutoplayBlocked}
-            />
-        </div>
-      }
+      <div className="home-video-wrapper">
+          <Youtube
+            videoId="sx9AilbuRcE"
+            className="home-video"
+            opts={options}
+            onReady={onPlayerReady}
+            onPlay={onPlayerPlay}
+            onStateChange={onPlayerStateChange}
+          />
+      </div>
+      {!videoPlaying && <img src={assets["Home"]["video-poster-img"]} className="home-video-placeholder"/>}
       <main>
         <article>
           <section ref={whatIsDBRef} className="what-is-db-section section-tb-padding">
