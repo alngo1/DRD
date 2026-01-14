@@ -23,7 +23,9 @@
         "npm:eslint@^9.19.0",
         "npm:globals@^15.14.0",
         "npm:react-dom@19",
+        "npm:react-google-recaptcha@^3.1.0",
         "npm:react-router@^7.2.0",
+        "npm:react-youtube@^10.1.0",
         "npm:react@19",
         "npm:vite@^6.1.0"
       ]

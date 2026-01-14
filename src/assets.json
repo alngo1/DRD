@@ -1,7 +1,7 @@
 {
     "Home": {
         "main-video" : "./assets/home/drd.mp4",
-        "video-poster-img": "./assets/home/team.png",
+        "video-poster-img": "./assets/home/drdvidplaceholder.png",
         "what-is-db-slides": [
             {
                 "img": "./assets/home/whatisdb1.jpg",

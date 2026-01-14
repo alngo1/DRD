@@ -9,6 +9,7 @@
     background: #02303E;
     opacity: 1;
     transition: all 0.5s ease;
+    pointer-events: none;
 
 
     & img{
