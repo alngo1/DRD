@@ -96,7 +96,7 @@ export default function About(props){
                     <HeaderSection
                         heading="About Us"
                         headingStyle="heading-font"
-                        paragraph="Established in 2004, Davis Racing Dragons is a student-run collegiate-level dragonboat team. We strive to create a fun, welcoming, and tight-knit community for people of all experience levels. One of our main priorities is to offer our members an environment where they can grow as both an individual and within the team."
+                        paragraph="Established in 2004, Davis Racing Dragons is a student-run collegiate-level dragon boat team. We strive to create a fun, welcoming, and tight-knit community for people of all experience levels. One of our main priorities is to offer our members an environment where they can grow as both an individual and within the team."
                         visual={<img src={assets["About"]["Header"].img} className="about-us-img" alt={assets["About"]["Header"].alt} />}
                     />
                     {props.isMobile ? 

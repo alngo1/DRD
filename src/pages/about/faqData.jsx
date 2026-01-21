@@ -8,7 +8,7 @@ export default [
         spanIndex: 1,
         answer: <div className="answer">
                     <p className="body-text-two-font">Nope, we paddle in dragon boat!</p>
-                    <p className="body-text-two-font"><span>Paddling (dragonboat)</span></p>
+                    <p className="body-text-two-font"><span>Paddling (dragon boat)</span></p>
                     <ul className="body-text-two-font">
                         <li>Use Paddles</li>
                         <li>Back + core</li>
@@ -103,7 +103,7 @@ export default [
         question: ["Can I ", "try out", " dragon boat without paying?"],
         spanIndex: 1,
         answer: <div className="answer">
-            <p className="body-text-two-font"><span>Yes</span>, anyone can try out dragonboat for free for the first 30 days they join!</p>
+            <p className="body-text-two-font"><span>Yes</span>, anyone can try out dragon boat for free for the first 30 days they join!</p>
         </div>,
         expanded: false
     },
@@ -134,7 +134,7 @@ export default [
         question: ["What do I need to know about dragon boat ", "races?"],
         spanIndex: 1,
         answer: <div className="answer">
-            <p className="body-text-two-font">Races are one of the <strong>best parts</strong> of dragonboat! They&#39;re exciting, fun, and you get to spend the entire day with the team showing off your hard work and winning medals! </p>
+            <p className="body-text-two-font">Races are one of the <strong>best parts</strong> of dragon boat! They&#39;re exciting, fun, and you get to spend the entire day with the team showing off your hard work and winning medals! </p>
             <p className="body-text-two-font">We usually participate in <strong>four</strong> races during the school year, and <strong>one</strong> in the summer. Races generally span between 1-2 days and will take the entire day.</p>
             <p className="body-text-two-font"><strong>Race fees</strong> are required for each race you attend (separate from team fees), and vary depending on the race.</p>
             <a target="_blank" href={assets["About"]["FAQLinks"]["DRD Youtube"]} className="secondary-button">DRD Youtube</a>

@@ -23,7 +23,7 @@ export default function LinkSection() {
                     <div className="link-section-text">
                         <img src={assets["Logo"].img} alt={assets["Logo"].alt} />
                         <p className="body-text-two-font link-section-team-name">Davis Racing Dragons</p>
-                        <h3 className="body-text-one-font link-section-title">Dragonboat at UC Davis</h3>
+                        <h3 className="body-text-one-font link-section-title">Dragon Boat at UC Davis</h3>
                     </div>
                     <Link onClick={() => {window.scroll(0,0)}} className="primary-button" to="/join">Join</Link>
                 </div>
