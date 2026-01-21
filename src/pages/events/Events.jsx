@@ -24,7 +24,7 @@ export default function Events(props){
                     <HeaderSection
                         heading="Events"
                         headingStyle="heading-font"
-                        paragraph="Davis Racing Dragons holds and participates in a variety of events throughout the year! These include our weekly practices, team socials, and dragonboat races."
+                        paragraph="Davis Racing Dragons holds and participates in a variety of events throughout the year! These include our weekly practices, team socials, and dragon boat races."
                         visual={<img src={assets["Events"]["Header"].img} className="" alt={assets["Events"]["Header"].alt} />}
                         // buttons={<button className="secondary-button event-button">View Full Calendar</button>}
                     />

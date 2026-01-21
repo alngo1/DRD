@@ -107,7 +107,7 @@ export default function Home(props){
           <h1 className="heading-font">
             <span className="body-text-one-font">Est. 2004</span>
             <br/>
-            Dragonboat at UC Davis
+            Dragon Boat at UC Davis
           </h1>
           <p className="body-text-one-font">Culture - Athleticism - Community</p>
           <Link className="primary-button" to="/join">Join <span className="body-text-one-font">Now</span></Link>
@@ -132,10 +132,10 @@ export default function Home(props){
         <article>
           <section ref={whatIsDBRef} className="what-is-db-section section-tb-padding">
                 {/* 2 What is DB Headers One for Desktop one for Mobile */}
-                <h2 className="sub-heading-font what-is-db-header">What is dragonboat?</h2>
+                <h2 className="sub-heading-font what-is-db-header">What is dragon boat?</h2>
                 <div className="what-is-db-content content-max-width site-lr-padding">
                     <div className="what-is-db-content-text">
-                      <h2 className="sub-heading-font what-is-db-header">What is dragonboat?</h2>
+                      <h2 className="sub-heading-font what-is-db-header">What is dragon boat?</h2>
                       <p className="body-text-two-font">Originating from China, this sport and festival has been a tradition for over 2,000 years. Today, dragon boat is enjoyed worldwide. A typical dragon boat crew consists of 20 people, in addition to a drummer and steersperson.</p>
                     </div>
                     <Carosel slides={assets["Home"]["what-is-db-slides"]}/>
@@ -147,7 +147,7 @@ export default function Home(props){
               <img src={assets["Home"]["our-story"]["img"]} alt={assets["Home"]["our-story"]["alt"]}/>
               <div className="our-story-text">
                 <h2 className="sub-heading-font">Our Story</h2>
-                <p className="body-text-two-font">Davis Racing Dragons was established in 2004 by students who wanted to bring collegiate-level dragonboat to UC Davis. Since then, we have always strived to create a fun, welcoming community built on teamwork and competitive excellence. </p>
+                <p className="body-text-two-font">Davis Racing Dragons was established in 2004 by students who wanted to bring collegiate-level dragon boat to UC Davis. Since then, we have always strived to create a fun, welcoming community built on teamwork and competitive excellence. </p>
                 <Link className="secondary-button" to="/about" onClick={() => {window.scrollTo(0, 0)}}>About Page</Link>
               </div>
             </div>
